@@ -16,11 +16,12 @@ header .wrapper {
     align-items: center;
 }
 header .logo a {
+    position: relative;
     display: block;
-    font-size: 0;
-    line-height: 0;
     width: 130px;
     height: 20px; 
+    font-size: 0;
+    line-height: 0;
     background: url(../images/logo.svg) no-repeat center center / contain;
 }
 header .gnb_open, .gnb_close {
@@ -35,6 +36,7 @@ header .gnb .gnb_wrap ul.depth1 > li { /* 자식 선택자 안에 겹치는 요�
     width: 74px;
     text-align: center;
 }
+
 header .gnb .gnb_wrap ul.depth1 > li > a {
     display: block;
     padding: 32.5px 0;
@@ -71,14 +73,20 @@ header.menu_pc::before {
 header.menu_pc::after {
     position: absolute;
     content: "";
-    bottom: 0;
+    top: 90px;
     left: 0;
     width: 100%;
     height: 1px;
     background-color: rgba(204, 204, 204, 0.6);
 }
-header.menu_pc .logo a::before {
-    background-image: url(../images/logo_w.svg);
+header.menu_pc .logo a {
+    position: relative;
+    display: block;
+    width: 130px;
+    height: 20px; 
+    font-size: 0;
+    line-height: 0;
+    background: url(../images/logo_w.svg) no-repeat center center / contain;
 }
 header.menu_pc .gnb .gnb_wrap ul.depth1 > li.active > a {
     color: #304BFF;
@@ -99,6 +107,187 @@ header.menu_pc .gnb .gnb_wrap ul.depth2 > li > a:hover {
     color: #304BFF;
 }
 
+@media screen and (min-width:641px){
+    header .gnb_open, .gnb_close {
+        display: none;
+    }
+    header .gnb .gnb_wrap ul.depth1 {
+        display: flex;
+        gap: 24px;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li { 
+        position: relative;
+        width: 74px;
+        text-align: center;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        display: block;
+        padding: 32.5px 0;
+        font-weight: 700;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a span {
+        position: relative;  
+    }
+    header .gnb .gnb_wrap ul.depth2 {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        left: 0;
+        width: 100%;
+        gap: 24px;
+        padding-top: 20px;
+    }
+    header .gnb .gnb_wrap ul.depth2 > li > a {
+        font-size: 16px;
+    }
+
+    header.menu_pc {
+        color: #1d1d1d;
+    }
+    header.menu_pc::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 304px;
+        background-color: #fff;
+    }
+    header.menu_pc::after {
+        position: absolute;
+        content: "";
+        top: 90px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: rgba(204, 204, 204, 0.6);
+    }
+    header.menu_pc .logo a::after{
+        background-image: url(../images/logo_w.svg);
+    }
+    header.menu_pc .gnb .gnb_wrap ul.depth1 > li.active > a {
+        color: #304BFF;
+    }
+    header.menu_pc .gnb .gnb_wrap ul.depth1 > li.active > a span::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: -10px;
+        z-index: 10px;
+        width: calc(100% + 20px);
+        border: 1px solid #304BFF;
+    }
+    header.menu_pc .gnb .gnb_wrap ul.depth2 {
+        display: flex;
+    }
+    header.menu_pc .gnb .gnb_wrap ul.depth2 > li > a:hover {
+        color: #304BFF;
+    }
+    
+}
+
+@media screen and (max-width:640px){
+    header .logo a {
+        position: relative;
+        display: block;
+        width: 130px;
+        height: 20px;
+        margin: 35px 0; 
+        font-size: 0;
+        line-height: 0;
+        background: url(../images/logo.svg) no-repeat center center / contain;
+    }
+    header .gnb .gnb_open {
+        display: block;
+        font-size: 0;
+        line-height: 0;
+        width: 24px;
+        height: 24px;
+        background: url(../images/gnb_hamberger.svg) no-repeat center center / contain;
+    }
+    header .gnb .gnb_wrap {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        height: 100dvh;
+        background-color: #fff;
+        color: #1d1d1d;
+    }
+    header .gnb .gnb_close {
+        display: none;
+    }
+
+    header .gnb .gnb_wrap {
+        display: block;
+    }
+    header .gnb .gnb_close {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 33px;
+        z-index: 101;
+        width: 24px;
+        height: 24px;
+        font-size: 0;
+        line-height: 0;
+        background: url(../images/close.svg) no-repeat center center / contain;
+    }
+    header .gnb .gnb_wrap ul.depth1 {
+        position: relative;
+        flex-direction: column;
+        top: 90px;
+        height: calc(100dvh - 90px);
+        gap: 0;
+        overflow-y: auto; /* 스크롤줄때 세로든 가로든 정확한 높이를 지정해줘야함 */
+        z-index: -1;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li {
+        width: auto;
+        text-align: left;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.6);
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        position: relative;
+        padding: 16px 20px;
+        font-size: 18px;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a::after {
+        content: '';
+        position: absolute;
+        top: 16px;
+        right: 20px;
+        width: 24px;
+        height: 24px;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.9999 13.2923L16.5999 8.69226L17.3076 9.40001L11.9999 14.7078L6.69212 9.40001L7.39987 8.69226L11.9999 13.2923Z' fill='%235F6368'/%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li:hover > a::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.9999 13.2923L16.5999 8.69226L17.3076 9.40001L11.9999 14.7078L6.69212 9.40001L7.39987 8.69226L11.9999 13.2923Z' fill='%23304BFF'/%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: scaleY(-1);
+    }
+    header .gnb .gnb_wrap ul > li:hover > a span {
+        color: #304BFF;
+    }
+    header .gnb .gnb_wrap ul li.open > .depth2 {
+        z-index: 1;
+        position: absolute;
+        display: block;
+        flex-direction: column;
+        left: 0;
+        width: 100%;
+        gap: 24px;
+        padding: 20px;
+        background-color: #F5F5F5;
+    }
+}
 
 .visual {
     height: 800px;
