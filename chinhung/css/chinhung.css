@@ -1,0 +1,180 @@
+@import url(default.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.5;
+    letter-spacing: 0;
+    word-break: keep-all; /* (여백을 기준으로) 줄바꿈*/
+    word-wrap: break-word; /* 단어가 너무 길어서 줄바꿈이 안될때 강제로 줄바꿈
+     word-break: keep-all;로 단어별로 (여백) 줄바꿈때문에 생기는 오류 수정*/
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+#wrap {
+    min-width: 1300px;
+    /* 브라우저의 최소 넓이를 지정
+    - 작은 브라우저에서 가로스크롤이 생기면 배경이 짤림 
+    wrapper에서 지정한 width에 좌우여백 20px씩 준 값
+    1260 + 40 = 1300 */
+}
+
+header {
+    height: 100px;
+}
+header .wrapper {
+    display: flex;  
+    justify-content: space-between;
+}
+header .wrapper .logo {
+    margin: 34px 0 0 0;
+}
+header .wrapper .gnb ul {
+    display: flex;
+}
+header .wrapper .gnb ul li a {
+    color: #1d1d1d;
+    padding: 34px 30px;
+    display: block; /* a 는 무조건 블럭주는거임 */
+}
+
+.visual {
+    height: 800px;
+    background: url(../images/visual_bg1.png) no-repeat center center / cover;
+    color: #fff;
+    text-align: center;
+}
+.visual .wrapper h2 {
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 224px 0 0 0;
+}
+.visual .wrapper h2 strong {
+    font-size: 55px;
+    font-weight: 300;
+}
+.visual .wrapper p {
+    margin: 20px 0 0;
+}
+
+.biz {
+    margin: 146px 146px;
+}
+.biz .title {
+    margin: 0 0 50px 0;
+    text-align: center;
+}
+
+
+.biz .title h2 {
+    color: #1d1d1d;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    letter-spacing: -0.01em;
+}
+.biz .title strong {
+    color: #0F2A71;
+}
+.biz .title p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #3d3d3d;
+}
+.biz .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.biz .list ul li {
+    width: 297px;
+}
+.biz .list ul li h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px 0 0 0;
+}
+.biz .list ul li a {
+    display: block; /* a태그는 block아님 inline-block 필수 */
+    text-align: center;
+}
+.biz .list ul li p {
+    margin: 10px 0 30px 0;
+}
+.biz .list ul li .inner {
+    margin: 0 20px 0 20px;
+}
+.biz .list ul li a .more {
+    border: 1px solid #707070;
+    display: block; /* 해당요소를 감싸고 있는 요소와 같은 넓이 100% 차게 만들때 */
+    padding: 10px 0 10px 0;
+}
+.biz .list ul .photo{
+    font-size: 0;
+    line-height: 0;
+}
+.biz .list ul li a:hover .more {
+    border-color: #0F2A71;
+    background-color: #0F2A71;
+    color: #fff;
+}
+
+.brand {
+    background: url(../images/post_bg.png) no-repeat center center / cover;
+    height: 800px;
+    color: #fff;
+}
+.brand h2 {
+    font-size: 40px;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+    padding: 250px 0 0 0;
+    line-height: 1.2;
+}
+.brand p{
+    margin: 20px 0 40px 0;
+}
+.brand .more a {
+    display: inline-block; /* 패딩주면 위에 여백도 머기때문에 반드시 블럭 or 인라인블록*/
+    border: 1px solid #fff;
+    padding: 14px 40px;
+}
+.brand .more a:hover {
+    background-color: #0F2A71;
+    border-color:#0F2A71; /* 선두께 형태가 같다면 호버 색상만 변경이라면 border color로만 지정해줘도됨 */
+}
+
+footer {
+    padding: 68px 0 78px 0;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #1d1d1d;
+}
+footer .f_nav ul {
+    display: flex;
+}
+footer .f_nav ul li {
+    margin: 0 40px 0 0;
+}
+footer .f_nav ul li:last-child {
+    margin-right: 0;
+}
+footer .f_nav ul li.privacy {
+    font-weight: 700;   /* li.privacy (띄어쓰기 없음) 라는 의미는 <li class="privacy"> 요소라는 뜻
+                        li. privacy (띄어쓰기 있음)
+                        <li>
+                            <div class="privacy"> -- li안에 privacy라는 클래스를 갖는 요소 */
+}
+footer .f_info {
+    margin: 20px 0 20px 0;
+}
+footer .f_info span {
+    margin: 0 40px 0 0;
+    display: inline-block;
+}
+footer .copyright {
+    color: rgba(255, 255, 255, 0.4);
+}

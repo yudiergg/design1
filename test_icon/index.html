@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="images/css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add">
+    <title>아이콘 코딩</title>    
+</head>
+<body>
+    <div id="wrap" class="icon"><!--홈페이지 전체를 감싸는 레이아웃 요소-->
+        <div class="wrapper">
+            <div class="mobile_test">
+                <h2>png 이미지와 svg이미지의 차이점</h2>
+                <ul>
+                    <li>
+                        <h3>png 이미지</h3>
+                        <p>모바일에서 선명하게 보이지 않음 만약 png를 저장한 아이콘을 모바일에서 선명하게 보이게 저장하려면 x2배로 저장해야함</p>
+                        <div class="img_wrap"> <!-- 어떠한 요소를 묶는 요소의 이름에 wrap이라고 많이 씀 -->
+                            <img src="images/more_icon/link_icon_1.png" alt="청사안내">청사안내
+                            <img src="images/more_icon/link_icon_2.png" alt="조직안내">조직안내
+                            <img src="images/more_icon/link_icon_3.png" alt="업무안내">업무안내
+                            <img src="images/more_icon/link_icon_4.png" alt="민원상담">민원상담
+                        </div>
+                    </li>
+                    <li>
+                        <h3>svg 이미지</h3>
+                        <p>벡터형식으로 제작한 일러스트 나 로고등 이미지 저장가능 선명하게 보이며 아무리확대해도 깨지지않음</p>
+                        <div class="img_wrap"> <!-- 어떠한 요소를 묶는 요소의 이름에 wrap이라고 많이 씀 -->
+                            <img src="images/more_icon/link_icon1.svg" alt="청사안내">
+                            <img src="images/more_icon/link_icon2.svg" alt="조직안내">
+                            <img src="images/more_icon/link_icon3.svg" alt="업무안내">
+                            <img src="images/more_icon/link_icon4.svg" alt="민원상담">
+                        </div>
+                    </li>
+                </ul>
+                <div class="svg_img">
+                    <h2>svg를 이미지태그로 코딩한 스타일</h2>
+                    <p>아이콘을 이미지태그로 코딩하면 마우스를 오버했을때 이미지 교체해야 하는 디자인일 경우
+                        구현이 불가능합니다. 이미지의 위치를 디테일하게 조정하는게 어려움</p>
+                    <div class="more">
+                        <a href="#n">
+                            <strong>자세히보기</strong>
+                            <img src="images/more_icon/more_icon_b.png" alt="">
+                        </a>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/more_icon/link_icon1.svg" alt=""></div>
+                                    <strong>청사안내</strong>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/more_icon/link_icon2.svg" alt=""></div>
+                                    <strong>조직안내</strong>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/more_icon/link_icon3.svg" alt=""></div>
+                                    <strong>업무안내</strong>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/more_icon/link_icon4.svg" alt=""></div>
+                                    <strong>민원상담</strong>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="svg_bg">
+                            <h2>아이콘을 배경으로(svg이미지로) 처리하는 방식</h2>
+                            <p>주의 사항 : 이미지를 반드시 svg로 저장 (모바일에서 깨짐)</p>
+                            <div class="more"><a href="#n">자세히보기</a></div>
+                            <div class="list">
+                                <ul>
+                                    <li class="ico1">
+                                        <a href="#n">
+                                            <i></i>
+                                            <em>청사안내</em>
+                                        </a>
+                                    </li>
+                                    <li class="ico2">
+                                        <a href="#n">
+                                            <i></i>
+                                            <em>조직안내</em>
+                                        </a>
+                                    </li>
+                                    <li class="ico3">
+                                        <a href="#n">
+                                            <i></i>
+                                            <em>업무안내</em>
+                                        </a>
+                                    </li>
+                                    <li class="ico4">
+                                        <a href="#n">
+                                            <i></i>
+                                            <em>민원상담</em>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="svg_before">
+                            <h2>before나 after 가상 선택자에 svg를 배경으로 주는 방식 제일 많이 사용</h2>
+                            <p>before/after를 absolute로 해서 위치값을 조정하는 방식을 사용</p>
+                            <div class="more"><a href="#n">자세히보기</a></div>
+                            <div class="list">
+                                <ul>
+                                    <li class="ico1"><a href="#n">청사안내</a></li>
+                                    <li class="ico2"><a href="#n">조직안내</a></li>
+                                    <li class="ico3"><a href="#n">업무안내</a></li>
+                                    <li class="ico4"><a href="#n">민원상담</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="goolge">
+                            <h2>구글 아이콘, 폰트어썸 등에서 추천하는 방식</h2>
+                            <p>폰트 어썸은 굉장히 많이 사용되었음 (유료화되어서 지금안씀)
+                                si업체 솔루션 개발이나 어플리케이션 개발에서 많이 활용됨 (현재인기가 없음)
+                                아이콘 폰트를 만들어서 코드를 입력하면 아이콘이 나타남
+                                가벼움.. 용량이작음 경량화</p>
+                            <ul>
+                                <li>1. 구글 아이콘 홈페이지에서 아이콘 세팅하고 두께나 스타일 아무거나 클릭 (오른쪽에 코드가 나옴)</li>
+                                <li>2. 오른쪽 패널에서 static icon font 하단에 있는  css 링크 주소를 복사해서 넣어줌 (단 한번만 넣어줌)</li>
+                                <li>3. 실제 홈페이지에서 사용할 아이콘을 찾는다.</li>
+                                <li>4. 그 아이콘의 Inserting the icon 하단의 코드를 복사한다. </li>
+                                <li>5. 그걸 아이콘이 들어갈 위치에 붙여넣음 </li>
+                                <li>6. span태그는 i태그로 변경. 절대 class명 수정 x 영문도 함부로 바꾸면안됨 그걸바꾸면 아이콘이 바뀜 </li>
+                                <li>7. css에서 크기와 색상 변경 가능 </li>
+                            </ul>
+                            <div class="more">
+                                <a href="#n">
+                                    <strong>자세히보기</strong>
+                                    <i class="material-symbols-outlined">add</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="path">
+                <h2>svg를 코드값을 css에 background로 코딩하는 방식 (이미지 필요없음)</h2>
+                <p>svg를 별도로 저장하지 않아도 되는 장점.<br>
+                단점은 색상을 변경하려면 코드를 모두 수정해야함(구글 아이콘 처럼 단순하게 변경불가)
+                현재 꽤 많이 사용 (단 단순 아이콘일때)</p>
+                <div class="more"><a href="#n">자세히보기</a></div>
+                <div class="list">
+                    <ul>
+                        <li class="ico1"><a href="#n">청사안내</a></li>
+                        <li class="ico2"><a href="#n">조직안내</a></li>
+                        <li class="ico3"><a href="#n">업무안내</a></li>
+                        <li class="ico4"><a href="#n">민원상담</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div><!--width 전체적인 값 1260 만들려고 한번 만 감쌈 무조건 -->
+    </div>
+    <p></p>
+</body>
+</html>

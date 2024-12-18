@@ -1,0 +1,242 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+
+body {
+    margin: 80px 0;
+}
+
+.introduce .photo {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.introduce .photo.case1 {
+    line-height: 0;
+    font-size: 0;
+}
+.introduce .photo.case1 img {
+    width: 100%; /* 감싸는 애들 기준으로 상대적인 크기 figma fill*/
+}
+.introduce .photo.case2 {
+    height: 438px; /* figma 반응형할때 width 값은 fill로 따라오고 높이만 고정으로 할때 포토 높이 고정*/
+}
+.introduce .photo.case2 img {
+    width: 100%; /* photo 기준으로 가변 할 수있게함*/
+    height: 100%;
+    object-fit: cover;
+}
+
+.introduce .group {
+    display: flex;
+    margin: 80px 0;
+    gap: 20px;
+}
+.introduce h2 {
+    width: 100%;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #1d1d1d;
+}
+.introduce h2 span {
+    display: block; /* 개 틀딱 방식에서는 왜냐 각자 블럭요소여서 줄바꿈용으로함 */
+}
+.introduce p {
+    width: 100%;
+}
+.introduce p strong {
+    font-weight: 700;
+    color: #1d1d1d;
+}
+
+
+@media screen and (min-width:320px) and (max-width:640px){ /* 변경사항만 저장함*/
+    body {
+        margin: 40px 0;
+    }
+    .introduce .photo {
+        border-radius: 10px;
+    }
+    .introduce .photo.case2 {
+        height: 257px;
+    }
+    .introduce .group {
+        flex-direction: column;
+        margin: 40px 0;
+        gap: 16px;
+    }
+    .introduce h2 {
+        font-size: 24px;
+    }
+    .introduce h2 span {
+        display: inline-block; /* 개 틀딱 방식에서는 왜냐 각자 블럭요소여서 줄바꿈용으로함 */
+    }
+    .introduce h2 br {
+        display: none; /* 간단하게 생각하면 분기에 왔을때 줄바꿈 없애는거임 */
+    }
+    .introduce p strong {
+        font-size: 16px;
+        font-weight: 700;
+        color: #1d1d1d;
+    }
+}
+
+.news {
+    margin: 80px 0;
+}
+.news .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.news h2 {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #1d1d1d;
+}
+.news h3 {
+    display: none; /* 의미에맞게 코딩할려고 안적어도 되는디 구조상 달아주고 디자인에 없으니까 숨김 */
+}
+
+.news .news_group {
+    display: flex;
+    gap: 48px;
+}
+.news .news_group .notice {
+    width: 606px;
+    background-color: #F3F5FF;
+    padding: 40px;
+    border-radius: 20px;
+}
+.news .news_group .notice ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.news .news_group .notice ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #ccc;
+}
+.news .news_group .notice ul li:last-child a {
+    border-bottom: 0;
+}
+.news .news_group .notice ul li a strong {
+    width: calc(100% - 114px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #1d1d1d;
+}
+.news .news_group .notice ul li a:hover strong {
+    font-weight: 700;
+}
+.news .news_group .notice ul li a em {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: rgba(85, 85, 85, 0.6);
+}
+
+
+.news_group .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.news_group .gallery .list ul {
+    display: flex;
+    gap: 24px;
+}
+.news_group .gallery .list ul li a .photo {
+    width: 291px;
+    height: 165px;
+    overflow: hidden;
+}
+.news_group .gallery .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+.news_group .gallery .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+
+.news_group .gallery .list ul li a {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.news_group .gallery .list ul li a strong {
+    width: 291px;
+    /* figma max widht값 생각하기 한줄 ... 표현하기 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #1d1d1d;
+}
+
+@media screen and (min-width:320px) and (max-width:640px){
+    .news {
+        margin: 40px 0;
+    }
+    .news h2 {
+        font-size: 28px;
+    }
+    
+    .news .news_group {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    .news .news_group .notice {
+        width: auto;
+        background-color: #F3F5FF;
+        padding: 34px 20px 20px 20px;
+        border-radius: 10px;
+    }
+    .news .news_group .notice ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .news .news_group .notice ul li a strong {
+        font-size: 16px;
+    }
+    .news .news_group .notice ul li a em {
+        font-size: 14px;
+    }
+    
+    
+    .news_group .gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .news_group .gallery .list ul {
+        display: flex;
+        gap: 16px;
+    }
+    .news_group .gallery .list ul li a .photo {
+        height: 302px;
+    }
+    .news_group .gallery .list ul li a {
+        gap: 16px;
+    }
+    .news_group .gallery .list ul li a strong {
+        /* figma max widht값 생각하기 한줄 ... 표현하기 */
+        white-space: normal;
+        overflow: hidden;
+    }
+}

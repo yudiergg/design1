@@ -1,0 +1,128 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+
+.visual {
+    position: relative;
+    margin-bottom: 100px;
+}
+.visual h2 {
+    display: none;
+}
+.visual .swiper ul li {
+    height: 900px;
+}
+.visual .swiper ul li .photo {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+.visual .swiper ul li .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.visual .swiper .visual_text .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 400px;
+    color: #fff;   
+}
+.visual .swiper .visual_text h3 {
+    font-size: 55px;
+    font-weight: 700;
+}
+.visual .prev, .next {
+    position: absolute;
+    top: 310px;
+    left: 1%;
+    z-index: 1;
+    width: 48px;
+    height: 48px;
+    font-size: 0;
+    line-height: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32 44L12 24L32 4L35.55 7.55L19.1 24L35.55 40.45L32 44Z' fill='white' fill-opacity='0.6'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.visual .next {
+    left: auto;
+    right: 1%;
+    transform: scaleX(-1);
+}
+@media screen and (max-width:1400px){
+    .visual .prev, .next {
+        display: none;
+    }
+}
+.visual .btn_wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 50%;
+    bottom: 34px;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.visual .btn_wrapper .paging {
+    display: flex;
+    align-items: center;
+    width: auto;
+    gap: 10px;
+}
+.visual .btn_wrapper .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    opacity: 1;
+    background: none;
+}
+.visual .btn_wrapper .swiper-pagination-bullet-active {
+    background: rgba(255, 255, 255, 0.8);
+}
+.visual .btn_wrapper .play {
+    display: none;
+}
+.visual .btn_wrapper .play {
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.5 16.5L16.5 12L9.5 7.5V16.5ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7375 13.3833 22 12 22Z' fill='white' fill-opacity='0.8'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.visual .btn_wrapper .stop {
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 16H11V8H9V16ZM13 16H15V8H13V16ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7375 13.3833 22 12 22Z' fill='white' fill-opacity='0.8'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media screen and (max-width:640px){
+    .visual .swiper ul li {
+        height: 500px;
+    }
+    .visual .swiper .visual_text .wrapper {
+        margin-top: 200px;  
+    }
+    .visual .swiper .visual_text h3 {
+        font-size: 30px;
+    }
+}

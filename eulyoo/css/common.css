@@ -1,0 +1,41 @@
+body, html {
+    font-family: "Pretendard", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.5;
+    word-break: keep-all; 
+    word-wrap: break-word;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+#wrap {
+    overflow: hidden; 
+    min-width: 1300px; 
+    position: relative; /* header 정렬의 기준값 */
+}
+
+@media screen and (max-width:640px){
+    body, html {
+        font-size: 16px;
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+    #wrap {
+        min-width: 0;     
+    }
+}
+
+/* 드래그했을대 색상바뀌는거 */
+::selection {
+    background-color: #AE9E8F;
+    color: #FFF9F0;
+}
+::-moz-selection {
+    background-color: #AE9E8F;
+    color: #FFF9F0;
+}

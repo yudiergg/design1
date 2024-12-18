@@ -1,0 +1,50 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+
+.list {
+    margin: 100px 0;
+}
+.list .swiper ul li a {
+    display: block;
+}
+.list .swiper ul li a .photo {
+    height: 299px;
+    overflow: hidden;
+}
+.list .swiper ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.list .swiper ul li a h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1d1d1d;
+    line-height: 1.4;
+    margin: 20px 0 10px 0;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.list .swiper ul li a p {
+    line-height: 1.5;
+    height: 4.5em;
+    text-overflow: ellipsis;
+}
+
+.stroy .swiper ul li {
+    width: 600px;
+}
+
+@media screen and (max-width:640px){
+    .stroy .swiepr ul li {
+        width: 190px;
+    }
+}
+@media screen and (max-width:640px){
+    .news .swiepr ul li {
+        width: 190px;
+    }
+}

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+body {
+    font-family: "Noto Sans KR", serif;
+    /* body에는 기본 글자 스타일을 입력 - p의 스타일 */
+    font-size: 18px;
+    color: #3d3d3d;
+    font-weight: 400;
+    line-height: 1.5;   
+}
+* {/* *(별모양 선택자) 와일드카드라고함 */}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+.tit{
+    color: #2f2fbd;
+    text-align: center;
+}
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #2f2fbd;
+    text-align: center;
+    margin: 109px 0 0 0;
+
+}
+h2 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #3d3d3d;
+    margin: 100px 0 0 0;
+}

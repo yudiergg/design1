@@ -1,0 +1,256 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+
+.news {
+    margin: 100px 0;
+}
+.news .wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.news .tab_list ul {
+    display: flex;
+    border-bottom: 1px solid #ccc;  
+}
+.news .tab_list ul li button {
+    position: relative;
+    padding: 10px 20px;
+    font-family: "Pretendard";
+    font-size: 17px;
+    font-weight: 400;
+    color: #1d1d1d;
+}
+.news .tab_list ul li.active button {
+    font-weight: 700;
+}
+.news .tab_list ul li.active button::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #4D64FF;
+}
+
+
+.news .tab_contents {
+    padding: 60px 40px;
+    background-color: rgba(204, 204, 204, 0.2);
+}
+.news .tab_contents .tab_pannel {
+    display: none;
+}
+.news .tab_contents .tab_pannel.actvie {
+    display: block;
+}
+.news .tab_contents h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1d1d1d;
+}
+.news .tab_contents .tab_pannel .more {
+    position: absolute;
+    right: 0;
+    top: 7px;
+}
+.news .tab_contents .tab_pannel .more a {
+    padding: 12.5px 50px 12.5px 20px;
+    font-size: 16px;
+    border-radius: 100px;
+    background-color: #4D64FF;
+    color: #fff;
+}
+.news .tab_contents .tab_pannel .more a::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media screen and (max-width:640px){
+
+    .news .tab_list ul li button {
+        font-size: 16px;
+    }
+    .news .tab_contents {
+        padding: 32px 16px;
+    }
+    .news .tab_contents h3 {
+        margin-bottom: 8px;
+        font-size: 20px;
+    }
+    .news .tab_contents .tab_pannel .more {
+        top: 7;
+    }
+    .news .tab_contents .tab_pannel .more a {
+        display: block;
+        padding: 0;
+        font-size: 0;
+        line-height: 0;
+        background-color: #4D64FF;
+        color: #fff;
+    }
+    .news .tab_contents .tab_pannel .more a::before {
+        top: 0;
+        right: 0;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z' fill='%23555555'/%3E%3C/svg%3E%0A");
+    }
+}
+
+.notice {
+    margin: 100px 0;
+}
+.notice .list ul {
+    position: relative;
+    display: flex;
+    height: 414px;
+}
+.notice .list ul li {
+    width: 25%;
+}
+.notice .list ul li button {
+    width: 100%;
+    height: 51px;
+    font-size: 16px;
+    background-color: #F6F6F6;
+    border: 1px solid rgba(204, 204, 204, 0.8);
+    border-left-width: 0;
+}
+.notice .list ul li:first-child button {
+    border-left-width: 1px;
+    border-top-left-radius: 20px;
+}
+.notice .list ul li.active button {
+    font-weight: 700;
+    border-bottom-width: 0;
+    background-color: #fff;
+    color: #1d1d1d;
+}
+.notice .list ul li .tap_contents {
+    display: none;
+    position: absolute;
+    top: 51px;
+    left: 0;
+    border: 1px solid rgba(204, 204, 204, 0.8);
+    border-top-width: 0;
+    border-radius: 0 0 20px 20px;
+}
+.notice .list ul li .tap_contents .inner {
+    padding: 40px;
+}
+.notice .list ul li.active .tap_contents {
+    display: block;
+}
+.notice .list ul li.active .tap_contents h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1d1d1d;
+}
+.notice .list ul li .tap_contents .more {
+    position: absolute;
+    top: -51px;
+    right: 0;
+}
+.notice .list ul li .tap_contents .more a {
+    display: block;
+    width: 315px;
+    height: 51px;
+    padding: 14px 0 14px 90px;
+    background-color: #304BFF;
+    color: #fff;
+    border-top-right-radius: 20px;
+}
+.notice .list ul li .tap_contents .more a::after {
+    content: "";
+    position: absolute;
+    top: 13.5px;
+    right: 90px;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media screen and (max-width:640px){
+
+    .notice .list ul {
+        position: relative;
+        display: flex;
+        height: 414px;
+    }
+    .notice .list ul li {
+        width: calc(25%);
+    }
+    .notice .list ul li button {
+        width: 100%;
+        height: 51px;
+    }
+    .notice .list ul li .tap_contents {
+        display: none;
+        position: absolute;
+        top: 51px;
+        left: 0;
+        border: 1px solid rgba(204, 204, 204, 0.8);
+        border-top-width: 0;
+        border-radius: 0 0 20px 20px;
+    }
+    .notice .list ul li .tap_contents .inner {
+        padding: 20px;
+    }
+    .notice .list ul li.active .tap_contents {
+        display: block;
+    }
+    .notice .list ul li.active .tap_contents h3 {
+        margin-bottom: 10px;
+        font-size: 24px;
+        font-weight: 700;
+        color: #1d1d1d;
+    }
+    .notice .list ul li .tap_contents .more {
+        position: absolute;
+        top: -51px;
+        right: 0;
+    }
+    .notice .list ul li .tap_contents .more a {
+        display: block;
+        width: 25%;
+        height: 51px;
+        padding: 14px 0 14px 90px;
+        font-size: 0;
+        line-height: 0;
+        border-top-right-radius: 20px;
+        background-color: #304BFF;
+        color: #fff;
+        border-top-right-radius: 20px;
+    }
+    .notice .list ul li .tap_contents .more a::after {
+        content: "";
+        position: absolute;
+        top: 13.5px;
+        right: 0;
+        width: 24px;
+        height: 24px;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z' fill='white'/%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+.etc {
+    margin: 100px 0;
+}

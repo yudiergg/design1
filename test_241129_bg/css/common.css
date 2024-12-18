@@ -1,0 +1,19 @@
+body, html {
+    font-family: "Pretendard", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.5;
+    letter-spacing: 0;
+    word-break: keep-all; /* 단어별로 여백바꿈 */
+    word-wrap: break-word;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+#wrap {
+    overflow: hidden; /* wrap 영역 바꾸로 나간요소 숨긴 처리 figma에서 클립 컨텐츠 생각하기 */
+    min-width: 1300px;
+    /*콘텐츠 영역이 1260 인데 여백 20씩준거임 답답해서*/
+}

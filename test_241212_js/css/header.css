@@ -1,0 +1,101 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 100;
+    color: #fff;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+header .logo a {
+    display: block;
+    width: 130px;
+    height: 20px;
+    font-size: 0;
+    line-height: 0;
+    background: url(../images/logo.svg) no-repeat center center / contain;
+}
+header .gnb .gnb_open,
+.gnb_close {
+    display: none;
+}
+header .gnb .gnb_wrap ul.depth1 {
+    display: flex;
+    gap: 20px;
+}
+header .gnb .gnb_wrap ul.depth1 li a {
+    line-height: 100%;
+}
+/* 마우스를 오버했을때 고정했을때 */
+header.on {
+    background-color: #fff;
+    color: #1d1d1d;
+    border-bottom: 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+}
+header.on .logo a {
+    display: block;
+    width: 130px;
+    height: 20px;
+    font-size: 0;
+    line-height: 0;
+    background-image: url(../images/logo_w.svg); /* 로고나 아이콘 색상만 바뀔때 이미지로 변경후 변경*/
+}
+
+.visual {
+    height: 900px;
+    background: url(../images/visual_bg.jpg) no-repeat center center / cover;  
+}
+
+@media screen and (max-width:640px){
+    header .wrapper {
+        margin: 0 20px;
+    }
+    header .gnb .gnb_open {
+        display: block;
+        width: 24px;
+        height: 24px;
+        font-size: 0;
+        line-height: 0;
+        background: url(../images/gnb_hamberger.svg) no-repeat center center / contain;
+    }
+    header.on .gnb .gnb_open {
+        display: block;
+        width: 24px;
+        height: 24px;
+        font-size: 0;
+        line-height: 0;
+        background-image: url(../images/gnb_b_hamberger.svg);
+    }
+    header .gnb .gnb_wrap ul.depth1 {
+        display: none;
+    }
+    .visual {
+        height: 600px;
+        background: url(../images/visual_bg.jpg) no-repeat center center / cover;  
+    }
+}
+
+aside {
+    margin: 1000px 20px 200px 0;
+    text-align: right;
+}
+aside .top {
+    width: 67px;
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #304BFF;
+    color: #fff;
+}

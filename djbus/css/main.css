@@ -1,0 +1,305 @@
+@import url(default.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.5;
+    letter-spacing: 0;
+    word-break: keep-all; /* (여백을 기준으로) 줄바꿈*/
+    word-wrap: break-word; /* 단어가 너무 길어서 줄바꿈이 안될때 강제로 줄바꿈
+     word-break: keep-all;로 단어별로 (여백) 줄바꿈때문에 생기는 오류 수정*/
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+#wrap {
+    min-width: 1300px;
+    /* 브라우저의 최소 넓이를 지정
+    - 작은 브라우저에서 가로스크롤이 생기면 배경이 짤림 
+    wrapper에서 지정한 width에 좌우여백 20px씩 준 값
+    1260 + 40 = 1300 */
+}
+header {
+    height: 95px;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header h1{
+    margin: 24px 0 0 0;
+}
+header .gnb ul {
+    display: flex;
+}
+header .gnb ul li a {
+    display: block;
+    padding: 34px 20px 34px 20px;
+    color: #1d1d1d;
+    line-height: 1.5;
+    position: relative; /* after 정렬의 기준 */
+}
+header .gnb ul li a:hover {
+    color: #111A6D;
+    font-weight: 700;
+}
+header .gnb ul li a:hover::after { /* a에게 마우스를 올렸을때 가상선택자 */
+    content: "";
+    position: absolute; /* a 기준으로 정렬 */
+    left: 20px;
+    bottom: 12px;
+    width: calc(100% - 40px); /* 퍼센티지 픽셀빼는법 반응형때매 많이씀 */
+    height: 2px;
+    background-color: #111A6D;
+}
+.visual {
+    height: 800px;
+    background: url(../images/visual_bg.jpg) no-repeat center center / cover;
+    /* 백 이미지 넣을때 공식처럼 그냥 왜우셈 한줄로 */
+    color: #fff;
+}
+.visual strong {
+    padding: 286px 0 0 0;
+    display: block;
+    /* 스트롱 혼자만 잡히는 인라인이라 블럭처리하고 마진안먹혀서 패딩줌 */
+}
+.visual h2 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+.int {
+    margin: 140px 0;
+}
+.int .txt_left, /* 다중선택자 영역 제대로 일관되게 작성 */
+.int .txt_right {
+    display: flex;
+    justify-content: space-between;
+}
+.int .inner {
+    width: 511px;
+}
+/* inner wrapper 나열해서 css줄때 제끼고 작성해도됨 약간 무명인이라고 생각 */
+
+.int strong {
+    display: block;
+    margin: 52px 0 10px 0;
+    color: #111A6D;
+    /* block 준이유 하나만먹는 요소라 그영역 전체로 만들어줌 */
+}
+.int h3 {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+}
+.int h3 em {
+    color: #111A6D;
+}
+.int p {
+    margin: 30px 0 0 0;
+}
+.int .more {
+    display: flex; /* flex는 하위요소를 block으로 만듬 */
+    margin: 40px 0 0 0; 
+}
+.int .more a.point {
+    background-color: #111A6D;
+    color: #fff;
+}
+.int .more a {
+    display: block;
+    padding: 13px 35px;
+    margin: 0 10px 0 0;
+    border: 1px solid #111A6D;
+    border-radius: 100px;
+    color: #111A6D;
+}
+.int .more a:hover{
+    border-color: #F8B227;
+    background-color: #F8B227;
+    color: #fff;
+}
+/* a태그 중에서 point 클래스를 갖는 a */
+.int .photo {
+    overflow: hidden; /* 사진 클리핑마스크 생각하기*/
+    border-radius: 20px;
+    font-size: 0;
+    line-height: 0;
+}
+.int .txt_left {
+    margin: 0 0 60px 0;
+}
+.pr {
+    margin: 140px 0 140px 0;
+    background: url(../images/pr_bg.jpg) no-repeat center top;
+    color: #fff;
+}
+.pr .news {
+    display: flex;
+    justify-content: space-between;
+    padding: 140px 0 0 0;
+    position: relative; /* more 정렬의 중심 */ 
+}
+.pr .news .title strong {
+    display: block;
+    color: #F8B227;
+}
+.pr .news .title em {
+    color: #F8B227;
+}
+.pr .news .title h3 {
+    margin: 10px 0 0 0;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.pr .news .list {
+    width: 618px;
+}
+.pr .news .list ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.pr .news .list ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0 20px 0;
+}
+.pr .news .list ul li a:hover h4 {
+    font-weight: 700;
+}
+.pr .news .list ul li span {
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.pr .news .more {
+    position: absolute;
+    left: 0;
+    top: 291px;
+}
+.pr .news .more a {
+    display: block;
+    padding: 13px 35px;
+    margin: 0 10px 0 0;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    color: #fff;
+}
+.pr .news .more a:hover {
+    border: 1px solid #F8B227;
+    background-color: #F8B227;
+    color: #fff;
+}
+.pr .video {
+    position: relative;
+    margin: 200px 0 0 0;
+}
+.pr .video .title strong {
+    display: block;
+    color: #F8B227;
+}
+.pr .video .title h3 {
+    margin: 10px 0 40px 0;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.pr .video .title em {
+    color: #F8B227;
+}
+.pr .video .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.pr .video .list ul li {
+    width: 404px;
+}
+.pr .video .list ul li a {
+    display: block;
+}
+.pr .video .list ul li a h4 {
+    margin: 20px 0 0 10px;
+    color: #1d1d1d;
+}
+.pr .video .list ul li a:hover h4{
+    font-weight: 700;
+}
+.pr .video .list ul li .photo {
+    overflow: hidden;
+    border: 1px solid #111A6D;
+    border-radius: 20px;
+    font-size: 0;
+    line-height: 0;
+}
+.pr .video .list ul li a .photo img{
+    transition: 0.3s; /* 애니메이션 효과인데 천천히 처리하는거 숫자가 적을수록 빨라짐 */
+}
+.pr .video .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1); /* 호버했을때 가로세로 1.2 */
+}
+.pr .video .more {
+    position: absolute;
+    right: 0;
+    top: 38px;
+}
+.pr .video .more a {
+    padding: 13px 35px;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    color: #fff; 
+}
+.pr .video .more a:hover {
+    border-color: #F8B227;
+    background-color: #F8B227;
+    color: #fff;
+}
+footer {
+    background-color: #1d1d1d;
+    padding: 62px 0 90px 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+footer .f_nav ul {
+    display: flex;
+}
+footer .f_nav ul li {
+    position: relative;
+    margin: 0 20px 0 0;
+}
+footer .f_nav ul li::after {
+    position: absolute;
+    content: "";
+    right: -12px;
+    top: 9px;
+    width: 1px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+/* li중에서 마지막 li의 after가 숨김처리 되어야함 li중에서 마지막 */
+footer .f_nav ul li:last-child::after {
+    display: none; /* 숨김처리 */
+}
+footer .f_nav ul li a {
+    display: block;
+}
+footer .f_nav ul li.privacy a { /* 붙여서 쓴이유는 중복되는 li 안에서 그중에 하나 콕찝을려고 */
+    color: #F8B227;
+    font-weight: 700;
+}
+footer .f_nav ul li a:hover{
+    text-decoration: underline;
+}
+footer .f_info address {
+    margin: 20px 0 20px 0;
+}
+footer .f_info span {
+    margin: 0 20px 0 0;
+}
+footer .copyright {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 20px 0 0 0;
+}

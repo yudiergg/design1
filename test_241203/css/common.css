@@ -1,0 +1,30 @@
+body, html {
+    font-family: "Pretendard", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.5;
+    word-break: keep-all; /* 단어별로 여백바꿈 */
+    word-wrap: break-word;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+#wrap {
+    overflow: hidden; /* wrap 영역 바꾸로 나간요소 숨긴 처리 figma에서 클립 컨텐츠 생각하기 */
+    min-width: 1300px; /* 1260에서 패딩주면안되니까 양옆 마진 준 역활함 */
+}
+
+@media screen and (max-width:640px){ /* 반응형 640px 이하 일때 그리고 바뀌는거만 잡아줌 */ 
+    body, html {
+        font-size: 16px;
+    }
+    .wrapper {
+        width: auto; /* 피그마 fix값을 hug나 fill로 변경하는 부분 영역에 맞게 줄어들거나 차는거 생각 */
+        margin: 0 20px;
+    }
+    #wrap {
+        min-width: 0;     
+    }
+}

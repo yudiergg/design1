@@ -1,0 +1,471 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 100;
+    background-color: transparent;
+    color: #fff;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin: 23px 0;
+    font-size: 0;
+    line-height: 0;
+}
+header .gnb ul {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Pretendard';
+    font-weight: 700;
+}
+header .gnb ul a {
+    display: block;
+    margin: 31.5px 20px;
+}
+header .tnb {
+    display: flex;
+    justify-content: space-between;
+    margin: 23px 10px;
+}
+header .tnb .mypage a {
+    display: block;
+    margin: 10px 10px;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 22C10.6333 22 9.34167 21.7375 8.125 21.2125C6.90833 20.6875 5.84583 19.9708 4.9375 19.0625C4.02917 18.1542 3.3125 17.0917 2.7875 15.875C2.2625 14.6583 2 13.3667 2 12C2 10.6167 2.2625 9.32083 2.7875 8.1125C3.3125 6.90417 4.02917 5.84583 4.9375 4.9375C5.84583 4.02917 6.90833 3.3125 8.125 2.7875C9.34167 2.2625 10.6333 2 12 2C13.3833 2 14.6792 2.2625 15.8875 2.7875C17.0958 3.3125 18.1542 4.02917 19.0625 4.9375C19.9708 5.84583 20.6875 6.90417 21.2125 8.1125C21.7375 9.32083 22 10.6167 22 12C22 13.3667 21.7375 14.6583 21.2125 15.875C20.6875 17.0917 19.9708 18.1542 19.0625 19.0625C18.1542 19.9708 17.0958 20.6875 15.8875 21.2125C14.6792 21.7375 13.3833 22 12 22ZM12 19.95C12.4333 19.35 12.8083 18.725 13.125 18.075C13.4417 17.425 13.7 16.7333 13.9 16H10.1C10.3 16.7333 10.5583 17.425 10.875 18.075C11.1917 18.725 11.5667 19.35 12 19.95ZM9.4 19.55C9.1 19 8.8375 18.4292 8.6125 17.8375C8.3875 17.2458 8.2 16.6333 8.05 16H5.1C5.58333 16.8333 6.1875 17.5583 6.9125 18.175C7.6375 18.7917 8.46667 19.25 9.4 19.55ZM14.6 19.55C15.5333 19.25 16.3625 18.7917 17.0875 18.175C17.8125 17.5583 18.4167 16.8333 18.9 16H15.95C15.8 16.6333 15.6125 17.2458 15.3875 17.8375C15.1625 18.4292 14.9 19 14.6 19.55ZM4.25 14H7.65C7.6 13.6667 7.5625 13.3375 7.5375 13.0125C7.5125 12.6875 7.5 12.35 7.5 12C7.5 11.65 7.5125 11.3125 7.5375 10.9875C7.5625 10.6625 7.6 10.3333 7.65 10H4.25C4.16667 10.3333 4.10417 10.6625 4.0625 10.9875C4.02083 11.3125 4 11.65 4 12C4 12.35 4.02083 12.6875 4.0625 13.0125C4.10417 13.3375 4.16667 13.6667 4.25 14ZM9.65 14H14.35C14.4 13.6667 14.4375 13.3375 14.4625 13.0125C14.4875 12.6875 14.5 12.35 14.5 12C14.5 11.65 14.4875 11.3125 14.4625 10.9875C14.4375 10.6625 14.4 10.3333 14.35 10H9.65C9.6 10.3333 9.5625 10.6625 9.5375 10.9875C9.5125 11.3125 9.5 11.65 9.5 12C9.5 12.35 9.5125 12.6875 9.5375 13.0125C9.5625 13.3375 9.6 13.6667 9.65 14ZM16.35 14H19.75C19.8333 13.6667 19.8958 13.3375 19.9375 13.0125C19.9792 12.6875 20 12.35 20 12C20 11.65 19.9792 11.3125 19.9375 10.9875C19.8958 10.6625 19.8333 10.3333 19.75 10H16.35C16.4 10.3333 16.4375 10.6625 16.4625 10.9875C16.4875 11.3125 16.5 11.65 16.5 12C16.5 12.35 16.4875 12.6875 16.4625 13.0125C16.4375 13.3375 16.4 13.6667 16.35 14ZM15.95 8H18.9C18.4167 7.16667 17.8125 6.44167 17.0875 5.825C16.3625 5.20833 15.5333 4.75 14.6 4.45C14.9 5 15.1625 5.57083 15.3875 6.1625C15.6125 6.75417 15.8 7.36667 15.95 8ZM10.1 8H13.9C13.7 7.26667 13.4417 6.575 13.125 5.925C12.8083 5.275 12.4333 4.65 12 4.05C11.5667 4.65 11.1917 5.275 10.875 5.925C10.5583 6.575 10.3 7.26667 10.1 8ZM5.1 8H8.05C8.2 7.36667 8.3875 6.75417 8.6125 6.1625C8.8375 5.57083 9.1 5 9.4 4.45C8.46667 4.75 7.6375 5.20833 6.9125 5.825C6.1875 6.44167 5.58333 7.16667 5.1 8Z' fill='white'/%3E%3C/svg%3E%0A");
+    font-size: 0;
+    line-height: 0;
+}
+header .tnb .global button {
+    margin: 10px 10px;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 12C10.9 12 9.95833 11.6083 9.175 10.825C8.39167 10.0417 8 9.1 8 8C8 6.9 8.39167 5.95833 9.175 5.175C9.95833 4.39167 10.9 4 12 4C13.1 4 14.0417 4.39167 14.825 5.175C15.6083 5.95833 16 6.9 16 8C16 9.1 15.6083 10.0417 14.825 10.825C14.0417 11.6083 13.1 12 12 12ZM4 20V17.2C4 16.6333 4.14583 16.1125 4.4375 15.6375C4.72917 15.1625 5.11667 14.8 5.6 14.55C6.63333 14.0333 7.68333 13.6458 8.75 13.3875C9.81667 13.1292 10.9 13 12 13C13.1 13 14.1833 13.1292 15.25 13.3875C16.3167 13.6458 17.3667 14.0333 18.4 14.55C18.8833 14.8 19.2708 15.1625 19.5625 15.6375C19.8542 16.1125 20 16.6333 20 17.2V20H4ZM6 18H18V17.2C18 17.0167 17.9542 16.85 17.8625 16.7C17.7708 16.55 17.65 16.4333 17.5 16.35C16.6 15.9 15.6917 15.5625 14.775 15.3375C13.8583 15.1125 12.9333 15 12 15C11.0667 15 10.1417 15.1125 9.225 15.3375C8.30833 15.5625 7.4 15.9 6.5 16.35C6.35 16.4333 6.22917 16.55 6.1375 16.7C6.04583 16.85 6 17.0167 6 17.2V18ZM12 10C12.55 10 13.0208 9.80417 13.4125 9.4125C13.8042 9.02083 14 8.55 14 8C14 7.45 13.8042 6.97917 13.4125 6.5875C13.0208 6.19583 12.55 6 12 6C11.45 6 10.9792 6.19583 10.5875 6.5875C10.1958 6.97917 10 7.45 10 8C10 8.55 10.1958 9.02083 10.5875 9.4125C10.9792 9.80417 11.45 10 12 10Z' fill='white'/%3E%3C/svg%3E%0A");
+    font-size: 0;
+    line-height: 0;
+}
+
+.visual {
+    position: relative;
+    height: 900px;
+    background: url(../images/visual.jpg) no-repeat center center;
+    color: #fff;
+}
+.visual h2 {
+    padding-top: 400px;
+    font-family: 'Gmarket Sans';
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+
+.biz {
+    margin: 160px 0;
+}
+.biz .title {
+    position: sticky; /* 감싸는 요소가 overflow"hidden 있으면 적용안됨 실제로는 못함 */
+    top: 160px;
+}
+.biz .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.biz .title h3 {
+    margin-bottom: 10px;
+    font-family: 'Gmarket Sans';
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0;
+    color: #1d1d1d;
+}
+.biz .title strong {
+    color: #2979FF;
+}
+
+.biz .list {
+    display: flex;
+    gap: 24px;
+}
+.biz .list ul.up {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    row-gap: 24px;
+}
+
+.biz .list ul.down {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    row-gap: 24px;
+}
+
+.biz .list ul li a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 296px;
+    height: 449px;
+    padding: 40px 40px;
+    row-gap: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    color: #fff;
+}
+.biz .list ul li a .photo {
+    position: absolute; /* postion 없는요소와 있는 요소가 나와서 존재하면 postion 있는 요소가 위에 배치됨 */
+    top: 0;
+    right: 0;
+    z-index: -1; /* 레이어 겹칠때 우선순위 위로 올리는ㄱ */
+    width: 100%;
+    height: 100%;
+}
+.biz .list ul li a h3 {
+    font-family: 'Gmarket Sans';
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0;
+}
+.biz .list ul li a p {
+    display: none;
+}
+.biz .list ul li a span {
+    position: relative;
+    display: none; /* none 으로 바꿀거임 */
+    padding-right: 24px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+.biz .list ul li span::after {
+    position: absolute;
+    content: "";
+    top: 1.5px;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+/* 호버 한거 */
+.biz .list ul li a:hover {
+    background-color: rgba(40, 121, 255, 0.8);
+    transition: 0.3s;
+}
+.biz .list ul li a:hover p {
+    display: flex;
+}
+.biz .list ul li a:hover span {
+    display: flex;
+}
+
+
+.news strong {
+    color: #2979FF
+}
+.news {
+    height: 612px;
+    padding: 100px 0;
+    margin: 160px 0;
+    background-color: #F4F7FF;
+}
+.news .wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+.news .wrapper ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.news h3 {
+    font-family: 'Gmarket Sans';
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0;
+    color: #1d1d1d;
+}
+.news  .list ul li a {
+    display: flex;   
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.news  .list ul li a p {
+    width: calc(100% - 200px); /* 전체 영역에서 안에 p와 날짜 마진값 빼줌 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* figma max width 값 설정하고 넘쳤을때 점점점 표시  */
+}
+.news .list ul li a:hover {
+    font-weight: 700;
+    color: #0E47A1;
+}
+.news  .list ul li a em {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: rgba(61, 61, 61, 0.6)
+}
+.news .list ul li a:hover em {
+    font-weight: 700;
+    color: #0E47A1;
+}
+.news .more a {
+    position: absolute;
+    display: block;
+    top: 17px;
+    right: 0;
+    padding-right: 24px;
+    font-weight: 700;
+    color: #2979FF;
+}
+.news .more a:hover {
+    color: #0E47A1;
+}
+.news .more a::after {
+    position: absolute;
+    content: "";
+    top: 1.5px;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z' fill='%232979FF'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: transform 0.2s;
+}
+.news .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z' fill='%230E47A1'/%3E%3C/svg%3E%0A");
+    transform: rotate(90deg);
+}
+
+.webzin {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 160px 0;
+}
+.webzin h3 {
+    font-family: 'Gmarket Sans';
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0;
+    color: #1d1d1d;
+}
+.webzin strong {
+    color: #2979FF;
+}
+.webzin .list {
+    overflow: hidden; /* 밑에 카드 리스트들 원래는 밖으로 나가서 가로스크롤 생기는데 이때 클립 컨탠츠 효과 오버 플로우 */
+}
+.webzin .list ul {
+    display: flex;
+    width: 2020px;
+    gap: 24px;
+    /* li의 넓이 404 * li의 갯수 5 + gap 24 * 5-1 피그마 생각할때 flex로 디자인 작업시 그영역에 맞출려고
+    무조건 줄어들음 그래서 전체영역을 고정으로 잡아줌 */
+    position: relative; /* absolute는 공간 차지않고 위에 떠있음 relative는 공간을 영역을 인지시켜줌 그 레이어에 포함*/
+    left: 50%;
+    transform: translateX(-50%); /* ul 자신의 절반 */
+    
+}
+.webzin .list ul li {
+    width: 355px;
+}
+.webzin .list ul li a {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.webzin .list ul li a .photo {
+    height: 220px;
+    border-radius: 10px;
+    overflow: hidden; /* 피그마 클립콘텐츠 */
+}
+.webzin .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 감싸고 있는 상위요소인 .photo에 꽉꽉 채워서 들어가게 하는거 영역 생각 */
+    transition: 0.5s;
+}
+.webzin .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+.webzin .list ul li a strong {
+    font-family: 'Gmarket Sans';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0;
+    color: #2979FF;
+}
+.webzin .list ul li a h4 {
+    height: 2.8em;
+    font-family: 'Gmarket Sans';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0;
+    overflow: hidden;
+    color: #1d1d1d;
+    /*white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;*/
+
+}
+.webzin .list ul li a p {
+    line-height: 1.5;
+    height: 3.0em; /* 행간에 * 줄수 단위는 em */
+    overflow: hidden;
+}
+.webzin .more a {
+    position: absolute;
+    padding-right: 24px;
+    top: 17px;
+    left: calc(50% + 560px); /* 50# 그 영역에서 절반값임 2/1 이렇게 왜했냐 wrapper 로 1260 고정안해서 */
+    font-weight: 700;
+    color: #2979FF;
+}
+.webzin .more a::after {
+    position: absolute;
+    content: "";
+    top: 1.5px;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z' fill='%232979FF'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.webzin .more a::after {
+    position: absolute;
+    content: "";
+    top: 1.5px;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z' fill='%230E47A1'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: transform 0.2s;
+}
+.webzin .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z' fill='%230E47A1'/%3E%3C/svg%3E%0A");
+    transform: rotate(90deg);
+}
+
+.banner {
+    background: #F4F7FF;
+    padding: 100px;
+}
+.banner h3 {
+    font-family: 'Gmarket Sans';
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0;
+    color: #1d1d1d;
+}
+.banner strong {
+    color: #2979FF;
+}
+.banner .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.banner .list ul {
+    display: flex;
+    gap: 24px;
+}
+.banner .list ul li {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #555555;
+}
+.banner .list ul li a {
+    position: relative;
+    margin: 20px 66px 20px 40px;
+    width: 298px;
+    font-family: 'Gmarket Sans';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0;
+}
+.banner .list ul li a::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: -34px;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6 12L8 7.4L9.4 6L15.4 12L9.4 18L8 16.6L12.6 12Z' fill='%23555555'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.banner .list ul li:hover {
+    color: #fff;
+    background-color: #2979FF;
+}
+
+footer {
+    padding: 60px 0;
+    background-color: #1D1D1D;
+    color:rgba(255, 255, 255, 0.8);
+}
+footer .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+footer .f_nav ul {
+    display: flex;
+    gap: 24px;
+}
+footer .f_nav ul li:last-child {
+    font-weight: 700;
+    color: #fff;
+}
+footer .f_info {
+    display: flex;
+    gap: 24px;
+}
+footer .copyright {
+    color: rgba(255, 255, 255, 0.4);
+}

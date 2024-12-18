@@ -1,0 +1,150 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+body {
+    font-family: "Pretendard", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    /* 내가 제공할 웹폰트 이름 먼저쓰고
+    만약 그 기기에서 웹폰트가 적용이 안되면 대체로 사용할 폰트들의 이름을 나열해서 사용
+    웹 폰트 파일을 첫번째 것만 제공하면됨 대체로 쓴 폰트의 웹폰트 파일까지 제공할 필요는 없음 
+    cdm 방식 그냥 편하고 용량도적음 */
+    font-size: 17px;
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    /* em은 글자크기를 1em으로 보는 상대크기 */
+}
+h1, h2, h3 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+strong {
+    font-weight: inherit;
+}
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+li, ul, ol {
+    list-style: none;
+}
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+.story{
+    margin: 165px 0 165px 0;
+}
+.story .wrapper .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 0 40px 0;
+}
+.story .title .inner strong {
+    font-weight: 700;
+    font-size: 16px;
+    color: #f38b5e;
+}
+.story .title .inner h1 { 
+    font-weight: 700;
+    font-size: 40px;
+    color: #1d1d1d;
+    margin: 0 0 20px 0;
+}
+.story .title .more a {
+    background-color: #f38b5e;
+    padding: 17px 30px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+    display: block
+    /* a 스타일주면 display block 걍 공식 다만 내가 예상것보다 사이즈 크면 display:inline-block */
+}
+.story .title .more a:hover {
+    background-color: #e68155;
+}
+.story .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.story .list ul li {
+    width: 297px;
+}
+.story .list ul li a {
+    display: block;
+}
+.story .list ul li a .photo {
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.story .list ul li a .inner {
+    background-color: #f9f5ef;
+    border-radius: 0 0 20px 20px;
+    height: 170px;
+    padding: 20px 30px 30px 30px;
+}
+.story .list ul li a .inner h2 {
+    font-weight: 700;
+    font-size: 20px;
+    color: #1d1d1d;
+    margin: 0 0 4px 0;
+}
+.story .list ul li a .inner span {
+    font-size: 16px;
+    font-weight: 700;
+    color: #f38b5e;
+    display: block;
+    margin: 16px 0 0 0; /* span태그가 인라인 태그라서 margin적용이 안됨 block요소로 변경 */
+}
+.heart .title strong {
+    font-weight: 700;
+    font-size: 16px;
+    color: #f38b5e;
+}
+.heart .title h1 {
+    font-weight: 700;
+    font-size: 40px;
+    color: #1d1d1d;
+    margin: 0 0 20px 0;
+}
+.heart .content {
+    display: flex;
+    justify-content: space-between;
+}
+.heart .title {
+    margin: 0 0 40px 0;
+}
+.content .inner {
+    width: 574px;
+}
+.content .inner h3 {
+    font-weight: 700;
+    font-size: 30px;
+    color: #1d1d1d;
+    margin: 20px 0 0 0;
+}
+.content .inner .imp {
+    font-weight: 700;
+    font-size: 20px;
+    color: #f38b5e;
+    margin: 20px 0 20px 0;
+}
+.content .inner p {
+    margin: 10px 0 0 0;
+}
+.content .photo {
+    border-radius: 20px;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.content {
+    margin: 0 0 200px 0;
+}

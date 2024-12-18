@@ -1,0 +1,378 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+
+.tour {
+    margin: 500px 0;
+}
+.tour .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tour .list ul li { /* wrapper에서 width px값 나눠주고 100% 곱해준거임 */
+    width: 15.07%;
+    transition: 0.5s;
+}
+.tour .list ul li a {
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+    height: 434px;
+    padding: 40px;
+    overflow: hidden;
+    border-radius: 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.tour .list ul li.bg1 a {
+    background-image: url(../images/bg_1.jpg);
+}
+.tour .list ul li.bg2 a {
+    background-image: url(../images/bg_2.jpg);
+}
+.tour .list ul li.bg3 a {
+    background-image: url(../images/bg_3.jpg);
+}
+.tour .list ul li.bg4 a {
+    background-image: url(../images/bg_4.jpg);
+}
+.tour .list ul li a h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3
+}
+.tour .list ul li a p {
+    display: none;
+}
+
+.tour .list ul li.active {
+    width: 48.96%;
+}
+.tour .list ul li.active a h3 {
+    font-size: 34px;
+    transition: 0.5s;
+}
+.tour .list ul li.active p {
+    display: block;
+    transition: 0.5s;
+}
+
+@media screen and (max-width:640px){
+    .tour {
+        margin: 400px 0;
+    }
+    .tour .list ul {
+        flex-direction: column;
+        gap: 16px;
+    } 
+    .tour .list ul li { /* wrapper에서 width px값 나눠주고 100% 곱해준거임 */
+        width: auto;
+    }
+    .tour .list ul li a {
+        height: 138px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .tour .list ul li a h3 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.3
+    }   
+    .tour .list ul li.active {
+        width: auto;
+    }
+    .tour .list ul li.active a h3 {
+        font-size: 24px;
+    }
+    .tour .list ul li.active p {
+        display: none;
+    }
+}
+.biz {
+    margin: 300px 0;
+}
+.biz .list ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+.biz .list ul li {
+    width: 15.07%;
+    transition: 0.5s;
+}
+.biz .list ul li a {
+    position: relative;
+}
+.biz .list ul li a .photo {
+    height: 434px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.biz .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.biz .list ul li a h3 {
+    position: absolute;
+    left: 40px;
+    bottom: 77px;
+    width: calc(100% - 80px); /* 80은 양옆 마진준값 뺀거임 */
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #fff;
+    transition: 0.5s;
+}
+.biz .list ul li a p {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #fff;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+
+.biz .list ul li.active {
+    width: 48.96%;
+}
+.biz .list ul li.active a h3 {
+    font-size: 34px;
+    bottom: 83px;
+}
+.biz .list ul li.active a p {
+    opacity: 1;
+    bottom: 50px;
+}
+
+@media screen and (max-width:640px){
+    .biz .list ul {
+        display: block;
+        justify-content: space-between;
+    }
+    .biz .list ul li {
+        width: auto;
+    }
+    .biz .list ul li + li {
+        margin: 16px 0;
+    }
+    .biz .list ul li a {
+        position: relative;
+    }
+    .biz .list ul li a .photo {
+        height: 138px;
+        border-radius: 10px;
+    }
+    .biz .list ul li a h3 {
+        left: 20px;
+        bottom: 20px;
+        width: calc(100% - 40px);
+    }
+    .biz .list ul li a p {
+        display: none;
+    }
+    .biz .list ul li.active {
+        width: auto;
+    }
+    .biz .list ul li.active a h3 {
+        font-size: 24px;
+        bottom: 20px;
+    }
+}
+
+.banner {
+    margin: 100px 0;
+}
+.banner .list ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+.banner .list ul li {
+    width: calc(25% - 18px);
+    transition: 0.5s;
+}
+.banner .list ul li a {
+    position: relative;
+}
+.banner .list ul li a .photo {
+    position: relative;
+    height: 434px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.banner .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner .list ul li a h3 {
+    position: absolute;
+    left: 40px;
+    bottom: 77px;
+    width: calc(100% - 80px); /* 80은 양옆 마진준값 뺀거임 */
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #fff;
+    transition: 0.5s;
+}
+.banner .list ul li a p {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #fff;
+    opacity: 0;
+    transition: 0.5s;
+}
+@media screen and (min-width:641px){ /* pc 일때만 들어가 */
+    .banner .list ul li.on {
+        width: 48.96%;
+    }
+    .banner .list ul li.on a h3 {
+        bottom: 87px;
+        width: calc(100% - 80px); /* 80은 양옆 마진준값 뺀거임 */
+        font-size: 34px;
+    }
+    .banner .list ul li.on a p {
+        bottom: 50px;
+        opacity: 1;
+    }
+
+    .banner .list ul li.off {
+        width: 15.07%;
+    }
+    .banner .list ul li.off a .photo::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .banner .list ul li.off a h3 {
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .banner .list ul li.off a p {
+        display: none;
+    }
+}
+
+@media screen and (max-width:640px){
+    .banner .list {
+        overflow-x: auto; /* 스크롤 */
+    }
+    .banner .list ul {
+        gap: 16px;
+        width: 1124px;
+    }
+    .banner .list ul li {
+        width: 293px;
+    }
+    .banner .list ul li a .photo {
+        height: 434px;
+        border-radius: 20px;
+    }
+    .banner .list ul li a h3 {
+        left: 20px;
+        bottom: 20px;
+        width: calc(100% - 40px); /* 80은 양옆 마진준값 뺀거임 */
+    }
+    .banner .list ul li a p {
+        display: none;
+    }
+}
+
+.slide {
+    margin: 100px 0;
+}
+.slide .list ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+.slide .list ul li {
+    width: calc(25% - 18px);
+    transition: 0.5s;
+}
+.slide .list ul li a {
+    position: relative;
+}
+.slide .list ul li a .photo {
+    position: relative;
+    height: 434px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.slide .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide .list ul li a h3 {
+    position: absolute;
+    left: 40px;
+    bottom: 77px;
+    width: calc(100% - 80px); /* 80은 양옆 마진준값 뺀거임 */
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #fff;
+    transition: 0.5s;
+}
+.slide .list ul li a p {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #fff;
+    opacity: 0;
+    transition: 0.5s;
+}
+@media screen and (min-width:641px){ /* 40부터 모바일들어감 */ 
+    .slide .list ul li[data-status="on"] {
+        width: 48.96%;
+    }
+    .slide .list ul li[data-status="on"] a h3 {
+        bottom: 87px;
+        width: calc(100% - 80px); /* 80은 양옆 마진준값 뺀거임 */
+        font-size: 34px;
+    }
+    .slide .list ul li[data-status="on"] a p {
+        bottom: 50px;
+        opacity: 1;
+    }
+
+    .slide .list ul li[data-status="off"] {
+        width: 15.07%;
+    }
+    .slide .list ul li[data-status="off"] a .photo::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .slide .list ul li[data-status="off"] a h3 {
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .slide .list ul li[data-status="off"] a p {
+        display: none;
+    }
+}

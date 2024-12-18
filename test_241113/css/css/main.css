@@ -1,0 +1,93 @@
+@import url(default.css);
+#wrap {
+    min-width: 1300px;
+    /* 브라우저의 최소 넓이를 지정
+    - 작은 브라우저에서 가로스크롤이 생기면 배경이 짤림 
+    wrapper에서 지정한 width에 좌우여백 20px씩 준 값
+    1260 + 40 = 1300 */
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+    position: relative;
+}
+.sec01 {
+    height: 300px;
+    background-color: #f4f4f4;
+}
+.box {
+    width: 200px;
+    height: 150px;
+    border: 2px solid #3d3d3d;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.sec02 {
+    height: 300px;
+    background-color: #FBFFBE;
+    position: relative; /* box03의 정렬의 기준 */
+}
+.sec02 .box02 {
+    position: absolute;
+    /* sec02안에 있기 때문에 다른 요소를 기준으로 정렬하고싶어도 
+    sec02에 postion 속성이 있기 때문에 무조건 */
+    left: 50%;
+    top: 0;
+}
+.sec02 .box03 {
+    position: absolute; /* sec02을 기준으로 정렬 */
+    right: 10px;
+    bottom: 10px;
+}
+.news {
+    margin: 100px 0 100px 0;
+}
+.new .wrapper {
+    position: relative;
+    /* more 버튼의 정렬의 기준점 피그마 생각할때 프레임안에서 이미 영역은 차여있고
+    그 영역과 같이 움직여야할때를 생각하면됨 그때 앱솔루트를 주는데 일단 영역 지정하고
+    그안에서 놀아야함*/ 
+}
+.news h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 0 0 20px 0;
+    position: relative;
+}
+.news h2::before {
+    position: absolute;
+    left: 0;
+    top: -5px;
+    width: 100px;
+    height: 2px;
+    background-color: #015bd5;
+    content: "";
+    
+}
+.news h2::after {
+    content: "";
+}
+
+.news .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.news .list ul li {
+    width: 23%;
+    height: 100px;
+    background-color: #f4f4f4;
+}
+.news .more {
+    position: absolute;
+    right: 0;
+    top: 14px;
+}
+.news .more a {
+    background-color: #015bd5;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 50px;
+    display: inline-block;
+}

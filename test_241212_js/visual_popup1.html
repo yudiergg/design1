@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/visual_popup1.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/visual_popup1.js"></script>
+    <title>비주얼 팝업</title>
+</head>
+<body>
+    <div id="wrap">
+        <main class="container">
+            <section class="visual">
+                <h2>팝업</h2>
+                <div class="swiper">
+                    <ul class="swiper-wrapper">
+                        <!--팝업은 꼭 html에서 이미지로 넣어야함-->
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/visual_bg.jpg" alt=""></div>
+                            <div class="visual_text">
+                                <div class="wrapper">
+                                    <h3>popup1</h3>
+                                    <p>청산도가 가진 이야기를 전하는 특별한 공간</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/visual_bg1.jpg" alt=""></div>
+                            <div class="visual_text">
+                                <div class="wrapper">
+                                    <h3>popup2</h3>
+                                    <p>청산도가 가진 이야기를 전하는 특별한 공간</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/visual_bg2.jpg" alt=""></div>
+                            <div class="visual_text">
+                                <div class="wrapper">
+                                    <h3>popup3</h3>
+                                    <p>청산도가 가진 이야기를 전하는 특별한 공간</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/visual_bg3.jpg" alt=""></div>
+                            <div class="visual_text">
+                                <div class="wrapper">
+                                    <h3>popup4</h3>
+                                    <p>청산도가 가진 이야기를 전하는 특별한 공간</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <button class="prev">이전팝업보기</button>
+	            <button class="next">다음팝업보기</button>
+                <div class="btn_wrapper">
+                    <div class="paging"></div>
+                    <button class="play">다시시작</button>
+                    <button class="stop">일시정지</button>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #555555;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+strong {
+    font-weight: inherit;
+}
+a {
+    color: inherit;
+    text-decoration: none;    
+}
+.massege {
+    margin: 50px 0 75px 0;
+}
+.massege .wrapper .title h1 {
+    font-weight: 700;
+    font-size: 40px;
+    color: #2d2d2d;
+    margin: 0 0 16px 0;
+}
+.massege .wrapper .title h2 { 
+    font-weight: 400;
+    font-size: 17px;
+    color: #00b900;
+    padding: 0 0 8px 0;
+}
+.massege .wrapper .inner {
+    display: flex;
+    margin: 42px 0 42px 0;
+}
+.massege .wrapper .inner .more1 {
+    color: #00b900;
+    border: 1px solid #00b900;
+    padding: 10px 30px 10px 30px;
+    margin: 0 24px 0 0;
+}
+.massege .wrapper .inner .more {
+    color: #656565;
+    border: 1px solid #656565;
+    padding: 10px 30px 10px 30px;
+}
+.market {
+    background-image: url(../images/lastbg.png);
+    height: 620px;
+}
+.market .wrapper h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    padding: 73px 0 0 0;
+    margin:  0 0 28px 0;
+}
+.market .wrapper p {
+    color: #fff;
+    text-align: center;
+}
+.market .inner {
+    margin: 46px;
+    display: flex;
+    justify-content: space-around;
+}
+.market .wrapper .inner .more {
+    color: #fff;
+    padding: 10px 30px 10px 30px;
+    border: 1px solid #fff;
+}
+.market .wrapper .photo {
+    font-size: 0;
+    line-height: 0;
+}
