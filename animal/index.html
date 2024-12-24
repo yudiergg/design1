@@ -17,9 +17,9 @@
         <!-- header에 마우스를 올렸을때 pc 유일 모바일도 냅둠 : fixed
         pc에서 메뉴에 마우스를 오버했을때 : menu_pc
         모바일에서 메뉴를 열었을때 : menu_mo
-        검색을 클릭했을때 (pc/mobile 공통) : sch_open
+        검색을 클릭했을때 아래로 내려온팝업창 만들고 불러오게하기 (pc/mobile 공통) : sch_open
         -->
-        <header class="fixed  sch_open">
+        <header class="menu_mo"> 
             <h1 class="logo"><a href="#n">로고</a></h1>
             <nav class="gnb">
                 <button class="gnb_open">메뉴열기</button>
@@ -30,7 +30,7 @@
                                 꼭 jquery에서 클래스를 추가하는 것으로 구현
                                 li:hover로 구현하면 접근성 xx
                             -->
-                            <li class="over">
+                            <li>
                                 <a href="#n"><span>찾습니다</span></a>
                                 <ul class="depth2">
                                     <li><a href="#n"><span>실종신고</span></a></li>
@@ -67,10 +67,12 @@
                         <div class="search_area">
                             <form>
                                 <fieldset>
-                                    <legend>검색</legend>
-                                    <label for="keyword">검색어입력</label>
-                                    <input type="text" id="keyword"> <!--검색어 입력창-->
-                                    <input type="submit"> <!--검색버튼-->
+                                    <div class="inner">
+                                        <legend>검색</legend>
+                                        <label for="keyword">검색어입력</label>
+                                        <input type="text" id="keyword" class="keyword"> <!--검색어 입력창-->
+                                        <input type="submit" class="btn"> <!--검색버튼-->
+                                    </div>
                                 </fieldset>
                             </form>
                         </div>
