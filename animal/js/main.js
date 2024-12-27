@@ -46,7 +46,7 @@ $(document).ready(function(){
 
 	function device_chk(){
 	window_w = $(window).width()
-		if(window_w > 640){
+		if(window_w > 1100){
 		device_status = 'pc'
 		}else{
 		device_status = 'mobile'
@@ -148,10 +148,14 @@ $(document).ready(function(){
 		slidesPerView: 'auto', /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */ //css 넓이 지정한대로 보이게할려면 auto
 		spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
 		breakpoints: {
-			641: {    /* 1280px 이상일때 적용 */
-				slidesPerView: 4,
+			641: {    /* 1000 ~ 641px 이상일때 적용 */
+				slidesPerView: 3,
 				spaceBetween: 24,
 			},
+			1001: {    /* 1001px 이상일때 적용 */
+			slidesPerView: 4,
+			spaceBetween: 24,
+		},
 		},
 		loop: true,
 		navigation: {
@@ -173,7 +177,7 @@ $(document).ready(function(){
 		loop: true,
 		navigation: {
 			nextEl: '.find .panel02 .tab_content .next',
-			prevEl: 'find .panel02 .tab_content .prev',
+			prevEl: '.find .panel02 .tab_content .prev',
 		},
 	});
 	
@@ -188,6 +192,43 @@ $(document).ready(function(){
 		$('.find .tab_content').find('[data-tab="'+tab_name+'"]').addClass('active')
 		
 	})
+	/* adopt 색션 팝업창*/
+	const adopt_swiper = new Swiper('.adopt .swiper', { /* 팝업을 감싼는 요소의 class명 */
+	slidesPerView: 'auto', /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+	spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+	breakpoints: {
+		641: {   
+			slidesPerView: '3',
+			spaceBetween: 24,
+		},
+		1001: {   
+			slidesPerView: '6',
+			spaceBetween: 24,
+		},
+	},
+	centeredSlides: false, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+	loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+
+	navigation: {
+		nextEl: '.adopt .btn_wrap .next',
+		prevEl: '.adopt .btn_wrap .prev',
+	},
+	});
+	console.log('너이상없지?')
+
+	const reivew = new Swiper('.reivew .swiper', { /* 팝업을 감싼는 요소의 class명 */
+	slidesPerView: 'auto', /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+	spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+	breakpoints: {
+		1300: {   
+			slidesPerView: '4',
+			spaceBetween: 24,
+		},
+	},
+	centeredSlides: false, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+	loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+	});
+	console.log('너이상없지?')
 
 })
 	

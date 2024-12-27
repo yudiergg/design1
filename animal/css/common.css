@@ -16,7 +16,15 @@ body, html {
     min-width: 1300px; 
     position: relative; /* header 정렬의 기준값 */
 }
-
+@media screen and (max-width:1100px){
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+    #wrap {
+        min-width: 0;     
+    }
+}
 @media screen and (max-width:640px){
     body, html {
         font-size: 16px;
