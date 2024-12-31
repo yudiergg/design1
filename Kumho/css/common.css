@@ -1,0 +1,47 @@
+/* 글자 디폴트 스타일 wrapper width값 설정 */
+
+body, html {
+    font-family: "Roboto","Pretendard",'NanumSquareNeo', '나눔스퀘어네오', '나눔고딕', NanumGothic, -apple-system, BlinkMacSystemFont, helvetica, "Apple SD Gothic Neo", sans-serif;
+    /* 먼저 사용한 순서대로 적용됨 , 한글적용안되면 두번째에 한글폰트 지원한 폰트가사용됨*/
+    font-size: 17px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.5;
+    word-break: keep-all; 
+    word-wrap: break-word;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+#wrap {
+    width: 100%;
+    overflow: hidden; 
+    position: relative;
+}
+@media screen and (max-width:1300px){
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width:1000px){
+    body, html {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:640px){
+    body, html {
+        font-size: 16px;
+    }
+    
+}
+/* 드래그했을대 색상바뀌는거 */
+::selection {
+    background-color: #AE9E8F;
+    color: #FFF9F0;
+}
+::-moz-selection {
+    background-color: #AE9E8F;
+    color: #FFF9F0;
+}

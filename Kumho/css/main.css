@@ -1,0 +1,34 @@
+/* 메인페이지만 적용되는 스타일 다른 css 불러옴 */
+
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+@import url(layout.css);
+
+.visual h2 {
+    display: none;
+}
+.visual .swiper ul li .photo {
+    height: 900px;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.visual .swiper ul li .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.visual ul li .visual_txt {
+    position: absolute;
+    bottom: 7.1765rem; /* em 줄때는 디자인한 폰트의 사이즈를 기준으로 좌우 여백을 계산*/
+    left: 0;
+    width: 100%;
+    font-family: 'roboto';
+    font-size: 3.2353rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+}
+
+
