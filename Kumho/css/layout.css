@@ -1,1 +1,147 @@
 /* header / footer 모든 페이지의 공통 스타일이 들어감 */
+header {
+    z-index: 3;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: var( --header-h);
+    font-weight: 700;
+    background-color: #454A51;
+    color: #fff;
+}
+header .logo a {
+    display: flex;
+    color: transparent;
+    width: 6.4118em;
+    height: 2.1241em;   
+    background: url(../images/main/logo_b.svg) no-repeat center center / cover;
+}
+header.fixed {
+    background-color: #fff;
+    color: #717171;
+    transition: 0.3s;
+}
+header.fixed .logo a {
+    background-image: url(../images/main/logo_w.svg);
+}
+header.fixed .global button::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.9999 15.3573L6.69214 10.0495L7.39989 9.3418L11.9999 13.9418L16.5999 9.3418L17.3076 10.0495L11.9999 15.3573Z' fill='%23C6C6C6'/%3E%3C/svg%3E%0A");   
+}
+header.fixed.scroll_down {
+    transform: translateY(-100%);
+}
+
+@media screen and (min-width:1001px){
+    header .gnb_open , .gnb_close {
+        display: none;
+    }
+    header .gnb ul.depth1 {
+        position: relative;
+        display: flex;
+    }
+    header .gnb ul.depth1 > li > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 173px;
+        height: var(--header-h);
+    }
+    header .gnb ul.depth1 > li > ul.depth2 { /* 2차개념인 하위메뉴 숨겨놈 풀때 flex 주기 */
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: var(--header-h);
+    }
+    header .gnb ul.depth1 > li > ul.depth2 li a span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.1765em 2.3529em;
+        width: 173px;
+        font-weight: 400;
+    }
+    header .global button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 86px;
+        height: var(--header-h);
+        font-family: 'Pretendard';
+    }
+    header .global button::after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.0001 14.7069L6.69238 9.39916L7.40013 8.69141L12.0001 13.2914L16.6001 8.69141L17.3079 9.39916L12.0001 14.7069Z' fill='white'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    header .global .list ul { /* 언어 2차메뉴 숨겨놈 풀때 flex*/ 
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: var(--header-h);
+        right: 20px;
+        font-weight: 400;
+        background-color: #fff;
+        color: #454A51;
+    }
+    header .global .list ul li a {
+        display: flex;
+        padding: 0.5882em 1.9118em;
+    }
+}
+@media screen and (max-width:1000px){
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 0;
+    }
+    header .logo a {
+        display: flex;
+        color: transparent;
+        width: 6.4118em;
+        height: 2.1241em;   
+        background: url(../images/main/logo_w.svg) no-repeat center center / cover;
+        margin-left: 20px;
+    }
+    header .gnb ul.depth1 {
+        display: none;
+    }
+    header .global {
+        display: none;
+    }
+    header .gnb_open {
+        position: relative;
+        width: var(--header-h);
+        height: var(--header-h);
+        color: transparent;
+    }
+    header .gnb_open::after{
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 42.85%;
+        height: 42.85%;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 17.269V16.269H20V17.269H4ZM4 12.4997V11.4997H20V12.4997H4ZM4 7.73047V6.73047H20V7.73047H4Z' fill='%23454A51'/%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-size: contain;
+    }
+    header .gnb_close {
+        display: none;
+    }
+}
+footer {
+    margin-top: 2000px;
+}
+
+@media screen and (max-width:768px){
+}

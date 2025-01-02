@@ -5,6 +5,9 @@
 @import url(common.css);
 @import url(layout.css);
 
+.visual {
+    position: relative;
+}
 .visual h2 {
     display: none;
 }
@@ -19,6 +22,17 @@
     height: 100%;
     object-fit: cover;
 }
+.visual .swiper ul li.swiper-slide-active .photo img {
+    animation-name: visual_photo;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes visual_photo {
+    0% { transform: scale3d(1, 1, 1);}
+    100% {transform: scale3d(1.1, 1.1, 1);}
+}
 .visual ul li .visual_txt {
     position: absolute;
     bottom: 7.1765rem; /* em 줄때는 디자인한 폰트의 사이즈를 기준으로 좌우 여백을 계산*/
@@ -30,5 +44,113 @@
     line-height: 1.2;
     color: #fff;
 }
+.visual .ctrl_wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 2;
+    position: absolute;
+    bottom: 2.8235em;
+    left: calc(50% - 630px); /* flex 안쓰고 왼쪽 아래정렬 */
+    color: #fff;    
+}
+.visual .ctrl_wrap .paging {
+    display: flex;
+    font-size: 0;
+    line-height: 0;
+}
+.visual .ctrl_wrap .paging span {
+    font-size: 1rem;
+    line-height: 1;
+}
+.visual .ctrl_wrap .paging span.swiper-pagination-current {
+    position: relative;
+    font-weight: 0;
+    margin-right: 6.7059em;
+}
+.visual .ctrl_wrap .paging span.swiper-pagination-current::before {
+    position: absolute;
+    content: "";
+    top: 0.3823em;  
+    left: calc(100% + 1.4118em);
+    width: 3.8824em;
+    height: 2px;
+    background-color: #fff;
+}
+.visual .ctrl_wrap .paging span.swiper-pagination-current::after {
+    position: absolute;
+    content: "";
+    top: 0.3823em;  
+    left: calc(100% + 1.4118em);
+    width: 0;
+    height: 2px;
+    background-color: #EF0010;
+    animation-name: paging_ani;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes paging_ani {
+    0% {width: 0;}
+    100% {width: 3.8824em;}
+}
 
+.visual .ctrl_wrap .button_wrap {
+    display: flex;
+}
+.visual .ctrl_wrap .stop {
+    font-size: 0;
+    line-height: 0;
+    width: 1.4118rem;
+    height: 1.4118rem;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='8' y='6.5' width='3' height='11' fill='white'/%3E%3Crect x='13' y='6.5' width='3' height='11' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1.4118rem 1.4118rem;
+}
+.visual .ctrl_wrap .play {
+    display: none;
+}
+.visual .ctrl_wrap .play {
+    font-size: 0;
+    line-height: 0;
+    width: 1.4118rem;
+    height: 1.4118rem;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.5 12L9.25 16.7631L9.25 7.23686L17.5 12Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1.4118rem 1.4118rem;
+}
 
+@media screen and (max-width:1300px){
+    .visual .ctrl_wrap {
+        left: 20px; 
+    }
+}
+@media screen and (min-width:769px){
+    .visual ul li .visual_txt .line {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .visual ul li.swiper-slide-active .visual_txt .line p {
+        transform: translateY(100%);
+        animation-name: visual_text_ani;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    @keyframes visual_text_ani {
+        0% {transform: translateY(100%);}
+        20% {transform: translateY(100%);}
+        100% {transform: translateY(0);}
+    }
+}
+@media screen and (max-width:768px){
+    .visual .swiper ul li .photo {
+        height: 450px;
+    }
+    .visual ul li .visual_txt {
+        bottom: 4.3571em; /* em 줄때는 디자인한 폰트의 사이즈를 기준으로 좌우 여백을 계산*/
+        font-size: 1.75rem;
+    }
+}
