@@ -49,18 +49,16 @@ header.fixed.scroll_down {
         width: 173px;
         height: var(--header-h);
     }
-    header .gnb ul.depth1 > li > ul.depth2 { /* 2차개념인 하위메뉴 숨겨놈 풀때 flex 주기 */
+    header .gnb ul.depth1 > li > ul.depth2 { /* 2차개념인 하위메뉴 숨겨놈 풀때 block 주기 */
         display: none;
-        flex-direction: column;
         position: absolute;
-        left: 0;
         top: var(--header-h);
     }
     header .gnb ul.depth1 > li > ul.depth2 li a span {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 1.1765em 2.3529em;
+        padding: 2.3529em 1.1765em;
         width: 173px;
         font-weight: 400;
     }
