@@ -23,6 +23,8 @@ body, html {
 :root {
     --base-font-size: 17px;
     --header-h: 90px;
+    --header-depth2-h: 350px;
+    --main-color: #EF0010;
 }
 
 @media screen and (max-width:1300px){

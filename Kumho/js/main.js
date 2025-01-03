@@ -16,7 +16,6 @@ $(document).ready(function(){
         //     return '<span class="' + className + '"> 안녕' + (index + 1) + "</span>";
         // },
     },
-
     });
    
     $('.visual .ctrl_wrap .stop').on('click',function(){

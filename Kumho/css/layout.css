@@ -1,4 +1,28 @@
 /* header / footer 모든 페이지의 공통 스타일이 들어감 */
+.skipnav {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.skipnav a {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    background-color: #0063af;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+.skipnav a.menu {
+    background-color: #1d1d1d;
+}
+.skipnav a:focus {
+    top: 0;
+}
+
 header {
     z-index: 3;
     position: fixed;
@@ -19,18 +43,19 @@ header .logo a {
     height: 2.1241em;   
     background: url(../images/main/logo_b.svg) no-repeat center center / cover;
 }
-header.fixed {
+
+header.fixed, header.menu_pc {
     background-color: #fff;
     color: #717171;
     transition: 0.3s;
 }
-header.fixed .logo a {
+header.fixed .logo a, header.menu_pc .logo a {
     background-image: url(../images/main/logo_w.svg);
 }
-header.fixed .global button::after {
+header.fixed .global button::after, header.menu_pc .global button::after {
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.9999 15.3573L6.69214 10.0495L7.39989 9.3418L11.9999 13.9418L16.5999 9.3418L17.3076 10.0495L11.9999 15.3573Z' fill='%23C6C6C6'/%3E%3C/svg%3E%0A");   
 }
-header.fixed.scroll_down {
+header.fixed.scroll_down, header.menu_pc.scroll_down {
     transform: translateY(-100%);
 }
 
@@ -42,31 +67,60 @@ header.fixed.scroll_down {
         position: relative;
         display: flex;
     }
-    header .gnb ul.depth1 > li > a {
+    header .gnb ul.depth1 > li > a { /* a 가있으면 항상 a에 속성주기 부모주면 따로 a에도 줘야함..*/
         display: flex;
         justify-content: center;
         align-items: center;
         width: 173px;
         height: var(--header-h);
     }
-<<<<<<< Updated upstream
+    header .gnb ul.depth1 > li > a:hover {
+        color: var(--main-color);
+    }
     header .gnb ul.depth1 > li > ul.depth2 { /* 2차개념인 하위메뉴 숨겨놈 풀때 block 주기 */
+        position: absolute;
         display: none;
-=======
-    header .gnb ul.depth1 > li > ul.depth2 { /* 2차개념인 하위메뉴 숨겨놈 풀때 flex 주기 */
-        display: flex;
-        flex-direction: column;
->>>>>>> Stashed changes
+    }
+    header.menu_pc .gnb ul.depth1 > li > ul.depth2 { /* */
+        position: absolute;
+        display: block;
+    }
+    header.menu_pc::before {
+        content: "";
         position: absolute;
         top: var(--header-h);
+        left: 0;
+        width: 100%;
+        height: var(--header-depth2-h);
+        background-color: #fff;
+        border-top: 1px solid #D8D8D8;
     }
-    header .gnb ul.depth1 > li > ul.depth2 li a span {
+    header .gnb ul.depth1 > li > ul.depth2 > li > a {
+        display: none;
+    }
+    header.menu_pc .gnb ul.depth1 > li > ul.depth2 > li > a {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 2.3529em 1.1765em;
+        padding: 1.1765em 1.1765em;
         width: 173px;
+        font-size: 15px;
         font-weight: 400;
+    }
+    header.menu_pc .gnb ul.depth1 > li > ul.depth2 > li > a[target="_blank"]::after {
+        content: "";
+        width: 1rem;
+        height: 1rem;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.4 18L5 16.6L14.6 7H6V5H18V17H16V8.4L6.4 18Z' fill='%235F6368'/%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    header.menu_pc .gnb ul.depth1 > li > ul.depth2 > li > a:hover[target="_blank"]::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.4 18L5 16.6L14.6 7H6V5H18V17H16V8.4L6.4 18Z' fill='%23EF0010'/%3E%3C/svg%3E%0A");
+    }
+    header.menu_pc .gnb ul.depth1 > li > ul.depth2 > li > a:hover {
+        color: var(--main-color);
     }
     header .global button {
         display: flex;
@@ -95,7 +149,16 @@ header.fixed.scroll_down {
         background-color: #fff;
         color: #454A51;
     }
-    header .global .list ul li a {
+    header .global.open .list ul { /* 언어선택열림 */
+        display: flex;
+    } 
+    header .global.open button, header .global button::after, header .global button:hover, header .global.open .list ul li a:hover{
+        color: var(--main-color) !important; /* 속성값 뒤에 입력해야하며 우선순위 무조건 1위로 */
+    }
+    header .global.open button::after {
+        transform: scaleY(-1)
+    }
+    header .global.open .list ul li a {
         display: flex;
         padding: 0.5882em 1.9118em;
     }
@@ -112,16 +175,52 @@ header.fixed.scroll_down {
         color: transparent;
         width: 6.4118em;
         height: 2.1241em;   
-        background: url(../images/main/logo_w.svg) no-repeat center center / cover;
-        margin-left: 20px;
+        background: url(../images/main/logo_b.svg) no-repeat center center / cover;
     }
     header .gnb ul.depth1 {
-        display: none;
+        /* display: none; */
+        z-index: 100;
+        position: absolute;
+        top: 0;
+        left: 105%;
+        width: 100%;
+        height: calc(100dvh - var(--header-h) - 62px);
+        margin: var(--header-h) 0 62px 0;
+        overflow-y: auto; /* 콘텐츠가 더 길면 스크롤바 생성 */
+        background-color: #fff;
+        color: #717171;
+        transition: left 0.5s;
+
     }
-    header .global {
-        display: none;
+    header .gnb ul.depth1 > li > a {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 20px;
+        font-size: 1.2143rem;
     }
+    header .gnb ul.depth2 > li a {
+        display: none;
+        padding: 20px 20px;
+    }
+    header .gnb ul.depth2.open > li a {
+        display: flex;
+    }
+    header .gnb ul.depth1 > li > a::after {
+        position: relative;
+        content: "";
+        width: 1.7143em;
+        height: 1.7143em;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.0001 14.7069L6.69238 9.39916L7.40013 8.69141L12.0001 13.2914L16.6001 8.69141L17.3079 9.39916L12.0001 14.7069Z' fill='black'/%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    header .gnb ul.depth1.open > li > a::after {
+        transform: scaley(-1);
+    }
+
     header .gnb_open {
+        display: block;
         position: relative;
         width: var(--header-h);
         height: var(--header-h);
@@ -135,12 +234,55 @@ header.fixed.scroll_down {
         transform: translate(-50%, -50%);
         width: 42.85%;
         height: 42.85%;
-        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 17.269V16.269H20V17.269H4ZM4 12.4997V11.4997H20V12.4997H4ZM4 7.73047V6.73047H20V7.73047H4Z' fill='%23454A51'/%3E%3C/svg%3E%0A");
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 17.269V16.269H20V17.269H4ZM4 12.4997V11.4997H20V12.4997H4ZM4 7.73047V6.73047H20V7.73047H4Z' fill='white'/%3E%3C/svg%3E%0A");
         background-position: center center;
+        background-repeat: no-repeat;
         background-size: contain;
     }
     header .gnb_close {
         display: none;
+    }
+    header .global {
+        display: none;
+    }
+
+    /* 모바일 열림 */
+    header.menu_mo .gnb ul.depth1 {
+        display: block;
+        left: 0;
+    }
+    header.menu_mo .global button {
+        display: none;
+    }
+    header.menu_mo .global .list ul {
+        position: absolute;
+        display: flex;
+        top: calc(100dvh - 4.4286em);
+        left: 0;
+        color: #717171; 
+    }
+    header.menu_mo .global .list ul li a {
+        font-size: 1.5714rem;
+        padding: 20px 20px;
+        color: #E4E4E4;
+    }
+    header.menu_mo .global .list ul li.active a {
+        font-size: 1.5714rem;
+        padding: 20px 20px;
+        color: #454A51;
+    }
+    header.menu_mo .gnb_open::after{
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 42.85%;
+        height: 42.85%;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.40013 18.3069L5.69238 17.5992L11.2924 11.9992L5.69238 6.39916L6.40013 5.69141L12.0001 11.2914L17.6001 5.69141L18.3079 6.39916L12.7079 11.9992L18.3079 17.5992L17.6001 18.3069L12.0001 12.7069L6.40013 18.3069Z' fill='white'/%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 }
 footer {
