@@ -198,11 +198,11 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
         padding: 20px 20px;
         font-size: 1.2143rem;
     }
-    header .gnb ul.depth2 > li a {
+    header .gnb ul.depth2 > li > a {
         display: none;
         padding: 20px 20px;
     }
-    header .gnb ul.depth2.open > li a {
+    header .gnb ul.depth2.open > li > a {
         display: flex;
     }
     header .gnb ul.depth1 > li > a::after {
@@ -215,7 +215,7 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
         background-repeat: no-repeat;
         background-size: contain;
     }
-    header .gnb ul.depth1.open > li > a::after {
+    header .gnb ul.depth1 > li.open > a::after {
         transform: scaley(-1);
     }
 

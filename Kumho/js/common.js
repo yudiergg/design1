@@ -69,10 +69,7 @@ $(document).ready(function(){
         $('hedaer').removeClass('menu_pc')
         $('heaheader .gnb ul.depth1 > li > a').removeClass('over')
     })
-    /*header .global open 추가*/
-    /* header .global button title명 바꿈
-        1번 클릭하면 열리고 다시 클릭하면 닫힘
-        header global에 open 클래스가 있는지 체크*/
+
     $('header .global').on('click',function(){
         if(device_status === "pc"){
             if($(this).hasClass('open') === true){
@@ -86,23 +83,27 @@ $(document).ready(function(){
         }
     })
 
-    /* depth1 , depth2 open 빼줘야함
-    header .gnb ul.depth1 > li > a 클릭했을때
-    클릭 이벤트 삭제
-    1차 메뉴 ul, li에 open 클래스를 추가하거나 삭제
-    열려있으면 닫고, 닫혀있으면 나만 열어야함 */
     $('header .gnb ul.depth1 > li > a').on('click', function(e){
-        if(device_status === "mobile"){
-            e.preventDefault(); //a 클릭막기
-            if($(this).parent().hasClass('open') === true){
-                $(this).parent().removeClass('open')
-            }
-            else{
-                $('header .gnb ul.depth1 > li > a').removeClass('open')
-                $(this).parent().removeClass('open')
-            }
+        e.preventDefault(); // a 클릭 시 페이지 이동 방지
+        
+        // 클릭된 a의 부모 li의 자식 ul.depth2를 찾음
+        var $depth2 = $(this).next('ul.depth2'); // a 태그 뒤의 ul.depth2 찾기
+        
+        // 해당 ul.depth2에 .open 클래스를 토글 (있으면 제거, 없으면 추가)
+        if ($depth2.hasClass('open')) {
+            $depth2.removeClass('open'); // 이미 열려 있으면 닫기
+        } else {
+            $depth2.addClass('open'); // 열려 있지 않으면 열기
         }
-    })
+    });
+    /* open 추가되고 arrow 방향바뀜 */
+    $(document).ready(function () {
+        $(".gnb ul.depth1 > li > a").on("click", function (e) {
+            e.preventDefault(); // 링크 기본 동작 방지
+            $(this).closest("li").toggleClass("open"); // .open 클래스 토글
+        });
+    });
+
     $('header .gnb_open').on('click',function(){
         $('header').toggleClass('menu_mo');
     })
