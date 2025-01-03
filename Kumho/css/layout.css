@@ -49,8 +49,14 @@ header.fixed.scroll_down {
         width: 173px;
         height: var(--header-h);
     }
+<<<<<<< Updated upstream
     header .gnb ul.depth1 > li > ul.depth2 { /* 2차개념인 하위메뉴 숨겨놈 풀때 block 주기 */
         display: none;
+=======
+    header .gnb ul.depth1 > li > ul.depth2 { /* 2차개념인 하위메뉴 숨겨놈 풀때 flex 주기 */
+        display: flex;
+        flex-direction: column;
+>>>>>>> Stashed changes
         position: absolute;
         top: var(--header-h);
     }
