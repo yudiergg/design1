@@ -28,4 +28,23 @@ $(document).ready(function(){
         $(this).hide()
         $('.visual .ctrl_wrap .stop').show()
     });
+
+    const news_swiper = new Swiper('.news .swiper', {
+        slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        breakpoints: {
+            1001: {    /* 768px 이상일때 적용 */
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+        },
+        loop: false,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+
+        scrollbar: {
+            el: ".news .scroll",
+            hide: false,
+            draggable: true,
+            dragSize: 140,
+          },
+    });
 });

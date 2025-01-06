@@ -154,3 +154,378 @@
         font-size: 1.75rem;
     }
 }
+.biz {
+    padding: 140px 0;
+}
+.biz .title strong {
+    position: relative;
+    font-family: 'roboto';
+    font-size: 14px;
+    color: var(--second-color);
+}
+.biz .title strong::after {
+    position: absolute;
+    content: "";
+    width: 0.5294rem;
+    height: 0.5294rem;
+    top: -0.2353em;
+    right: -0.4118em;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 3.90282C0 4.03859 0.0197456 4.1793 0.0740543 4.3126C0.313506 4.90506 0.923245 5.27041 1.69838 4.96184C1.88352 4.88778 7.01076 2.82158 7.01076 2.82158C7.01076 2.82158 4.99146 7.94141 4.91493 8.13149C4.62117 8.86466 4.97418 9.52871 5.57404 9.75088C5.70735 9.80025 5.84559 9.82494 5.98136 9.82247C6.47261 9.82 6.90461 9.53118 7.1169 8.95353C7.149 8.86713 9.67435 1.9329 9.72866 1.7675C9.76075 1.66876 9.82 1.43671 9.82 1.27625C9.82 0.933122 9.6941 0.609739 9.44971 0.365349C9.21026 0.123429 8.88935 0 8.55115 0C8.38576 0 8.25245 0.0296229 8.05003 0.0938059C7.92907 0.133303 1.41943 2.55498 0.864002 2.76234C0.308572 2.9697 -1.35601e-06 3.41404 0.00246722 3.90282' fill='%23ED1C24'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.biz .title h2 {
+    margin: 0.2941em 0 1.4118em 0;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+}
+.biz .list ul {
+    display: flex;
+    gap: 0.1176em;
+    color: #fff;
+}
+.biz .list ul li {
+    width: 25%;
+    height: 29.4118rem;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.biz .list ul li.bg1 {
+    background: url(../images/main/biz01.jpg) no-repeat center center / cover;
+}
+.biz .list ul li.bg2 {
+    background: url(../images/main/biz02.jpg) no-repeat center center / cover;
+}
+.biz .list ul li.bg3 {
+    background: url(../images/main/biz03.jpg) no-repeat center center / cover;
+}
+.biz .list ul li.bg4 {
+    background: url(../images/main/biz04.jpg) no-repeat center center / cover;
+}
+.biz .list ul li a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    gap: 0.3846em;
+    padding: 2.3529em 2.3529em;
+    transition: 0.5s;
+}
+.biz .list ul li a::after {
+    z-index: 2;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35.2%;
+    background: linear-gradient(0deg,rgba(0,0,0,0.8), rgba(0,0,0,0));
+}
+.biz .list ul li a::before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+}
+.biz .list ul li a .title {
+    z-index: 3;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5882em;
+}
+.biz .list ul li h3 {
+    font-size: 1.5294rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.biz .list ul li a .title p { 
+    opacity: 0;
+    transition: 0.5s;
+}
+
+@media screen and (min-width:1001px){
+    .biz .list ul li {
+        width: 26%; /* 위에 준 영역보다 오버했을때 값이 작을시 제이쿼리로 오버했을때 크기가 작아지는 현상발생*/
+    }
+    .biz .list.over ul li.active {
+        width: 38.38%;
+    }
+    .biz .list.over ul li.active a::before {
+        opacity: 0;
+    }
+    .biz .list.over ul li.active a .title p {
+        opacity: 1;
+    }
+}
+@media screen and (max-width:1000px){
+    .biz {
+        padding: 70px 0;
+    }
+    .biz .title h2 {
+        margin: 0.2941em 0 2.1333em 0;
+        font-size: 1.3333rem;
+    }
+    .biz .list ul {
+        flex-direction: column;
+    }
+    .biz .list ul li {
+        width: auto;
+        height: 10.8333em;
+    }
+    .biz .list ul li a {
+        justify-content: center;
+    }
+    .biz .list ul li a::after {
+        display: none;
+    }
+    .biz .list ul li h3 {
+        font-size: 1.3333rem;
+    }
+    .biz .list ul li a .title p {
+        display: none; 
+    }
+}
+
+.news {
+    padding-bottom: 140px;
+}
+.news .wrapper {
+    position: relative;
+}
+.news .title strong {
+    position: relative;
+    font-family: 'roboto';
+    font-size: 14px;
+    color: var(--second-color);
+}
+.news .title strong::after {
+    position: absolute;
+    content: "";
+    width: 0.5294rem;
+    height: 0.5294rem;
+    top: -0.2353em;
+    right: -0.4118em;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 3.90282C0 4.03859 0.0197456 4.1793 0.0740543 4.3126C0.313506 4.90506 0.923245 5.27041 1.69838 4.96184C1.88352 4.88778 7.01076 2.82158 7.01076 2.82158C7.01076 2.82158 4.99146 7.94141 4.91493 8.13149C4.62117 8.86466 4.97418 9.52871 5.57404 9.75088C5.70735 9.80025 5.84559 9.82494 5.98136 9.82247C6.47261 9.82 6.90461 9.53118 7.1169 8.95353C7.149 8.86713 9.67435 1.9329 9.72866 1.7675C9.76075 1.66876 9.82 1.43671 9.82 1.27625C9.82 0.933122 9.6941 0.609739 9.44971 0.365349C9.21026 0.123429 8.88935 0 8.55115 0C8.38576 0 8.25245 0.0296229 8.05003 0.0938059C7.92907 0.133303 1.41943 2.55498 0.864002 2.76234C0.308572 2.9697 -1.35601e-06 3.41404 0.00246722 3.90282' fill='%23ED1C24'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.news .title h2 {
+    margin: 0.2941em 0 1.4118em 0;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+}
+.news ul li.swiper-slide strong {
+    color: var(--second-color);
+}
+.news ul li.swiper-slide a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1765em;
+    padding: 1.1765em 0;
+    border-top: 1px solid #D8D8D8;
+}
+.news ul li.swiper-slide a::before {
+    position: absolute;
+    content: "";
+    top: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--main-color);
+}
+.news ul li.swiper-slide a:hover::before {
+    animation-name: news_ani;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes news_ani {
+    0% {width: 0;} 
+    100% {width: 100%;}      
+}
+.news ul li.swiper-slide a h3 {
+    font-size: 1.4118rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--title-color);
+}
+.news ul li.swiper-slide a p {
+    line-height: 1.3;
+    height: 2.6em;
+    overflow: hidden;
+}
+.news ul li.swiper-slide a .photo {
+    height: 11.7647rem;
+    overflow: hidden;
+}
+.news ul li.swiper-slide a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.news ul li.swiper-slide a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+.news .scroll {
+    width: 100%;
+    height: 1px;
+    background-color: #D8D8D8;
+}
+.news .scroll .swiper-scrollbar-drag {
+    background-color: var(--main-color);
+    top: -3px;
+    height: 4px;
+}
+.news .scroll .swiper-scrollbar-drag:hover {
+    background-color: var(--main-color);
+}
+.news button {
+    position: absolute;
+    top: 4.4118em;
+    right: 0;
+    color: #555555;
+    padding: 0.5882em 1.1765em;
+    border: 1px solid #C6C6C6;
+    border-radius: 100px;
+}
+
+@media screen and (max-width:1000px){
+    .news {
+        padding-bottom: 70px;
+    }
+    .news .title h2 {
+        font-size: 1.3333rem;   
+    }
+    .news ul li.swiper-slide a {
+        font-size: 1.4286rem;
+        gap: 1.1765em;
+        padding: 2.2857em 0;
+    }
+    .news ul li.swiper-slide a h3 {
+        font-size: 1.4118rem;
+    }
+    .news ul li.swiper-slide a p {
+        font-size: 1.0667rem;
+    }
+    .news ul li.swiper-slide a .photo {
+        height: 13.3333rem;
+    }
+    .news button {
+        display: none;
+        position: absolute;
+        top: 46em;
+        right: 50%;
+        transform: translateX(-50%);
+        color: #555555;
+        padding: 0.5882em 1.1765em;
+        border: 1px solid #C6C6C6;
+        border-radius: 100px;
+    }
+}
+
+.link {
+    background: url(../images/main/link01.jpg) no-repeat center center/ cover;
+    padding: 8.2353em 0;
+}
+.link h2 {
+    margin: 0.2941em 0 1.4118em 0;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+}
+.link ul {
+    display: flex;
+    gap: 16px;
+}
+.link ul li {
+    flex: 1;
+}
+.link ul li a {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.1765em;
+    padding: 1.1765em 2.3529em;
+    background-color: #fff;
+    transition: 0.5s;
+}
+.link ul li:hover a {
+    transform: translate(-10px, -10px);
+}
+.link ul li a::after {
+    content: "";
+    width: 2.8235rem;
+    height: 2.8235rem;
+}
+.link ul li.link01 a::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='49' viewBox='0 0 48 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.0001 41.5003V25.7043C21.1231 25.7043 19.3294 25.3536 17.6191 24.6523C15.9091 23.951 14.3937 22.94 13.0731 21.6193C11.7527 20.299 10.7502 18.776 10.0656 17.0503C9.38091 15.3246 9.03857 13.526 9.03857 11.6543V9.6543H11.0386C12.8742 9.6543 14.6514 10.0125 16.3701 10.7288C18.0891 11.4451 19.6042 12.4613 20.9156 13.7773C21.9746 14.8363 22.8329 16.0401 23.4906 17.3888C24.1482 18.7375 24.5834 20.1631 24.7961 21.6658C25.0911 21.0991 25.4219 20.5665 25.7886 20.0678C26.1552 19.5688 26.5706 19.0873 27.0346 18.6233C28.3516 17.3076 29.8736 16.2915 31.6006 15.5748C33.3272 14.8585 35.1271 14.5003 37.0001 14.5003H39.0001V16.5003C39.0001 18.3743 38.6414 20.175 37.9241 21.9023C37.2071 23.63 36.1897 25.1526 34.8721 26.4703C33.5547 27.7876 32.0494 28.7886 30.3561 29.4733C28.6624 30.158 26.8771 30.5003 25.0001 30.5003V41.5003H23.0001ZM23.0386 23.6543C23.0386 22.0543 22.7302 20.5293 22.1136 19.0793C21.4969 17.6293 20.6219 16.3376 19.4886 15.2043C18.3552 14.071 17.0636 13.196 15.6136 12.5793C14.1636 11.9626 12.6386 11.6543 11.0386 11.6543C11.0386 13.2543 11.3386 14.7876 11.9386 16.2543C12.5386 17.721 13.4052 19.021 14.5386 20.1543C15.6719 21.2876 16.9719 22.1543 18.4386 22.7543C19.9052 23.3543 21.4386 23.6543 23.0386 23.6543ZM25.0001 28.5003C26.6001 28.5003 28.1251 28.2003 29.5751 27.6003C31.0251 27.0003 32.3167 26.1336 33.4501 25.0003C34.5834 23.867 35.4584 22.567 36.0751 21.1003C36.6917 19.6336 37.0001 18.1003 37.0001 16.5003C35.4001 16.5003 33.8667 16.8086 32.4001 17.4253C30.9334 18.042 29.6334 18.917 28.5001 20.0503C27.3667 21.1836 26.5001 22.4753 25.9001 23.9253C25.3001 25.3753 25.0001 26.9003 25.0001 28.5003Z' fill='%23EF0010'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.link ul li.link02 a::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='49' height='49' viewBox='0 0 49 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.79492 40.8066V6.80664H23.7949V14.8066H42.8719V40.8066H5.79492ZM7.79492 38.8066H13.7949V32.8066H7.79492V38.8066ZM7.79492 30.8066H13.7949V24.8066H7.79492V30.8066ZM7.79492 22.8066H13.7949V16.8066H7.79492V22.8066ZM7.79492 14.8066H13.7949V8.80664H7.79492V14.8066ZM15.7949 38.8066H21.7949V32.8066H15.7949V38.8066ZM15.7949 30.8066H21.7949V24.8066H15.7949V30.8066ZM15.7949 22.8066H21.7949V16.8066H15.7949V22.8066ZM15.7949 14.8066H21.7949V8.80664H15.7949V14.8066ZM23.7949 38.8066H40.8719V16.8066H23.7949V22.8066H28.5644V24.8066H23.7949V30.8066H28.5644V32.8066H23.7949V38.8066ZM33.3334 24.8066V22.8066H35.3334V24.8066H33.3334ZM33.3334 32.8066V30.8066H35.3334V32.8066H33.3334Z' fill='%23EF0010'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.link ul li.link03 a::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='49' height='49' viewBox='0 0 49 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.6665 29.654L31.8205 22.5L20.6665 15.346V29.654ZM18.6665 40.5V36.5H9.8975C8.97684 36.5 8.20817 36.1917 7.5915 35.575C6.97484 34.9583 6.6665 34.1897 6.6665 33.269V11.731C6.6665 10.8103 6.97484 10.0417 7.5915 9.425C8.20817 8.80833 8.97684 8.5 9.8975 8.5H39.4355C40.3562 8.5 41.1248 8.80833 41.7415 9.425C42.3582 10.0417 42.6665 10.8103 42.6665 11.731V33.269C42.6665 34.1897 42.3582 34.9583 41.7415 35.575C41.1248 36.1917 40.3562 36.5 39.4355 36.5H30.6665V40.5H18.6665ZM9.8975 34.5H39.4355C39.7435 34.5 40.0257 34.3718 40.282 34.1155C40.5383 33.8592 40.6665 33.577 40.6665 33.269V11.731C40.6665 11.423 40.5383 11.1408 40.282 10.8845C40.0257 10.6282 39.7435 10.5 39.4355 10.5H9.8975C9.5895 10.5 9.30734 10.6282 9.051 10.8845C8.79467 11.1408 8.6665 11.423 8.6665 11.731V33.269C8.6665 33.577 8.79467 33.8592 9.051 34.1155C9.30734 34.3718 9.5895 34.5 9.8975 34.5Z' fill='%23EF0010'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.link ul li a h3 {
+    font-size: 1.4118rem;
+    font-weight: 700;
+    color: #1d1d1d; 
+}
+
+@media screen and (max-width:740px){ /* min 740이상부터 max 740 이하부터*/
+    .link {
+        padding: 4.6667em 0;
+    }
+    .link h2 {
+        margin: 0.2941em 0 1.4118em 0;
+        font-size: 1.6rem;
+    }
+    .link ul li {
+        flex: 1; /* 비율똑같게 설정 */
+        min-width: 0;  /* 항목이 너무 작아질 경우 깨지지 않도록 설정 동일하게 줄어들음 */
+    }
+    .link ul li a {
+        flex-direction: column-reverse;
+        background-color: #fff;
+        padding: 1.0667em 1.3333em;
+    }
+    .link ul li a::after {
+        content: "";
+        width: 2.8235rem;
+        height: 2.8235rem;
+    }
+    .link ul li a h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #1d1d1d; 
+    }
+    .link ul li a span {
+        display: none;
+    }
+}

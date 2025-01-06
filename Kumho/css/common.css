@@ -25,6 +25,8 @@ body, html {
     --header-h: 90px;
     --header-depth2-h: 350px;
     --main-color: #EF0010;
+    --second-color: #454A51;
+    --title-color: #1d1d1d;
 }
 
 @media screen and (max-width:1300px){
@@ -38,12 +40,21 @@ body, html {
         --base-font-size: 15px;
     }
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:740px){
     :root {
         --base-font-size: 14px;
         --header-h: 57px;
     }
+    
 }
+@media screen and (max-width:360px){
+    :root {
+        --base-font-size: 14px;
+        --header-h: 57px;
+    }
+    
+}
+
 
 
 /* 드래그했을대 색상바뀌는거 */

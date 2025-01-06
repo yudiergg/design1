@@ -53,22 +53,27 @@ $(document).ready(function(){
         resize_chk()
     })
 
-    $('header .gnb ul.depth1 > li > a').on('mouseenter focusin', function(){
-        if(device_status === "pc"){
-            $('header').addClass('menu_pc')
-            $('header').removeClass('over')
-            $(this).addClass('over')
+        // 메뉴에 마우스 오버하거나 포커스 되었을 때
+    $('header .gnb ul.depth1 > li > a').on('mouseenter focusin', function() {
+        if (device_status === "pc") {
+            $('header').addClass('menu_pc');
+            $('header').removeClass('over');
+            $(this).addClass('over');
         }
-    })
-    $('header').on('mouseleave', function(){
-        $('hedaer').removeClass('menu_pc')
-        $('header .gnb ul.depth1 > li > a').removeClass('over')
-    })
-    // 메뉴 다음에 존재하는 링크에 포커스가 되었을대 메뉴 아웃
-    $('header .global').on('focusin', function(){
-        $('hedaer').removeClass('menu_pc')
-        $('heaheader .gnb ul.depth1 > li > a').removeClass('over')
-    })
+    });
+
+    // 헤더 영역에서 마우스가 나가면 초기화
+    $('header').on('mouseleave', function() {
+        $('header').removeClass('menu_pc');
+        $('header .gnb ul.depth1 > li > a').removeClass('over');
+    });
+
+    // 글로벌 영역으로 포커스 이동 시 메뉴 초기화
+    $('header .global').on('focusin', function() {
+        $('header').removeClass('menu_pc');
+        $('header .gnb ul.depth1 > li > a').removeClass('over');
+    });
+
 
     $('header .global').on('click',function(){
         if(device_status === "pc"){
@@ -83,22 +88,27 @@ $(document).ready(function(){
         }
     })
 
-    $('header .gnb ul.depth1 > li > a').on('click', function(e){
+    $('header .gnb ul.depth1 > li > a').on('click',function(e){
         e.preventDefault(); // a 클릭 시 페이지 이동 방지
-        
-        // 클릭된 a의 부모 li의 자식 ul.depth2를 찾음
-        var $depth2 = $(this).next('ul.depth2'); // a 태그 뒤의 ul.depth2 찾기
-        
-        // 해당 ul.depth2에 .open 클래스를 토글 (있으면 제거, 없으면 추가)
+    
+        let $depth2 = $(this).next('ul.depth2'); // a 태그 뒤의 ul.depth2 찾기
+    
         if ($depth2.hasClass('open')) {
-            $depth2.removeClass('open'); // 이미 열려 있으면 닫기
+            // 닫힐 때
+            $depth2.stop().slideUp(500,function(){
+                $depth2.removeClass('open');
+            });
         } else {
-            $depth2.addClass('open'); // 열려 있지 않으면 열기
+            // 열릴 때
+            $depth2.stop().slideDown(500,function(){
+                $depth2.addClass('open');
+            });
         }
     });
+
     /* open 추가되고 arrow 방향바뀜 */
-    $(document).ready(function () {
-        $(".gnb ul.depth1 > li > a").on("click", function (e) {
+    $(document).ready(function(){
+        $(".gnb ul.depth1 > li > a").on("click",function(e){
             e.preventDefault(); // 링크 기본 동작 방지
             $(this).closest("li").toggleClass("open"); // .open 클래스 토글
         });
@@ -108,6 +118,19 @@ $(document).ready(function(){
         $('header').toggleClass('menu_mo');
     })
 
+    /* list 오버하면 클래스에 over 추가되고 클릭하면 li class active가 추가됨*/
+    $('.biz .list ul li').on('mouseenter',function(){
+        // 기존의 모든 li 요소에서 'active' 클래스 제거
+        $('.biz .list ul li').removeClass('active');
+        // 현재 마우스가 진입한 li에 'active' 클래스 추가
+        $(this).addClass('active');
+        // .biz.list 요소에 'over' 클래스 추가
+        $('.biz .list').addClass('over');
+    });
 
+    $('.biz .list ul li').on('mouseleave',function(){
+        $('.biz .list ul li').removeClass('active');
+        $('.biz .list').removeClass('over');
+    })
 });
 
