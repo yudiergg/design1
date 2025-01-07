@@ -1,1 +1,6 @@
 /* sub 레이아웃 공통사항 적용 */
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+@import url(contents.css);
+@import url(layout.css); /* 헤더 푸터 여깄음 게속 쓰는 컴포넌트 느낌으로 */
