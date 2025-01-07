@@ -22,6 +22,14 @@ header .gnb ul.depth1 > li.active > a {
     color: #fff;
     gap: 2.8235em;
 }
+@media screen and (max-width:1000px){
+    header .gnb ul.depth2.open > li.active > a {
+        color: var(--main-color);
+    }
+    header .gnb ul.depth1.active > li > a {
+        color: var(--main-color);
+    }
+}
 .sub_visual.bg1 {
     background-image: url(../images/sub/sub_visual01.jpg);
 }
