@@ -454,7 +454,7 @@
     gap: 16px;
 }
 .link ul li {
-    flex: 1;
+    flex: 1; /* 비율 1대 1대 1*/
 }
 .link ul li a {
     display: flex;
@@ -507,7 +507,6 @@
         font-size: 1.6rem;
     }
     .link ul li {
-        flex: 1; /* 비율똑같게 설정 */
         min-width: 0;  /* 항목이 너무 작아질 경우 깨지지 않도록 설정 동일하게 줄어들음 */
     }
     .link ul li a {

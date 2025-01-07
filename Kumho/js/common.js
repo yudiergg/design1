@@ -132,5 +132,22 @@ $(document).ready(function(){
         $('.biz .list ul li').removeClass('active');
         $('.biz .list').removeClass('over');
     })
+    $('footer .top button').on('click',function(){
+        $('html, body').animate({ scrollTop: 0 }, 600); // 800ms 동안 부드럽게 스크롤
+    })
+
+    $('footer .family_site button').on('click', function () {
+        if ($(this).parent().hasClass('open')) {
+            // 열려 있는 경우 닫기
+            $(this).parent().removeClass('open'); // 부모의 'open' 클래스 제거
+            $(this).next('.list').slideUp(); // 리스트 닫기
+            $(this).attr('title', '열기'); // title 속성 업데이트
+        } else {
+            // 닫혀 있는 경우 열기
+            $(this).parent().addClass('open'); // 부모에 'open' 클래스 추가
+            $(this).next('.list').slideDown(); // 리스트 열기
+            $(this).attr('title', '닫힘'); // title 속성 업데이트
+        }
+    });
 });
 

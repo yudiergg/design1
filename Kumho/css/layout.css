@@ -288,9 +288,117 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
         background-size: contain;
     }
 }
-footer {
-    margin-top: 2000px;
-}
 
-@media screen and (max-width:768px){
+footer {
+    position: relative;
+    padding: 7.0588em 0;
+    background-color: #1d1d1d;
+    color: rgba(255, 255, 255, 0.8);
+}
+footer .top button {
+    display: inline-block;
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    width: 2.7059rem;
+    height: 2.7059rem;
+    border-radius: 50%;
+    font-size: 0;
+    line-height: 0;
+    background-color: var(--main-color);
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 0.255049L16 8.25505L14.509 9.74609L8 3.23714L1.49105 9.7461L-1.30351e-07 8.25505L8 0.255049Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+footer .wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+footer .family_site {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse
+}
+footer .family_site .list {
+    position: absolute;
+    display: none;
+    bottom: 48px;
+}
+footer .family_site .list.open {
+    display: flex;
+}
+footer .family_site .list ul li a {
+    display: flex;
+    width: 11.7647rem;
+    padding: 0.5882em 1.1765em;
+    background-color: #454A51;
+}
+footer .family_site .list ul li a:hover {
+    background-color: var(--main-color);
+}
+footer .family_site button {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0.5882em 1.1765em;
+    gap: 1.1765em;
+    border: 1px solid #fff;
+}
+footer .family_site button::before {
+    content: "";
+    width: 1.4118rem;
+    height: 1.4118rem;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.9999 9.29309L17.3076 14.6008L16.5999 15.3086L11.9999 10.7086L7.39987 15.3086L6.69212 14.6008L11.9999 9.29309Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+footer .family_site.open button::before {
+    transform: scaleY(-1);
+}
+footer .f_nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4118em;
+}
+footer .f_nav .info {
+    display: flex;
+    gap: 2.2353em;
+}
+footer .f_nav .info ul {
+    display: flex;
+    gap: 2.2353em;
+}
+footer .f_nav .copyright {
+    font-size: 0.8235rem;
+}
+@media screen and (max-width:740px){
+    footer {
+        padding: 5em 0;
+    }
+    footer .wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.2857em;
+    }
+    footer .f_nav {
+        gap: 2.2857em;
+    }
+    footer .f_nav .info {
+        flex-direction: column;
+        gap: 1.1429em;
+    }
+    footer .f_nav .info ul {
+        justify-content: space-between;
+    }
+    footer .f_nav .copyright {
+        text-align: center;
+    }
+}
+@media screen and (max-width:360px){
+    footer .f_nav .info ul {
+        flex-direction: column;
+        text-align: center;
+    }
 }
