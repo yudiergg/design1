@@ -4,3 +4,172 @@
 @import url(common.css);
 @import url(contents.css);
 @import url(layout.css); /* 헤더 푸터 여깄음 게속 쓰는 컴포넌트 느낌으로 */
+
+
+header .gnb ul.depth1 > li.active > a {
+    position: relative;
+    color: var(--main-color);
+}
+.sub_visual .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 29.4118rem;
+    padding-bottom: 2.8235em;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    gap: 2.8235em;
+}
+.sub_visual.bg1 {
+    background-image: url(../images/sub/sub_visual01.jpg);
+}
+.sub_visual.bg2 {
+    background-image: url(../images/sub/sub_visual02.jpg);
+}
+.sub_visual.bg3 {
+    background-image: url(../images/sub/sub_visual03.jpg);
+}
+.sub_visual.bg4 {
+    background-image: url(../images/sub/sub_visual04.jpg);
+}
+.sub_visual.bg5 {
+    background-image: url(../images/sub/sub_visual05.jpg);
+}
+.sub_visual.bg6 {
+    background-image: url(../images/sub/sub_visual06.jpg);
+}
+.contents {
+    padding: 8.2353em 0;
+}
+.sub_visual .sub_txt {
+    font-size: 3.2353rem;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+.sub_visual .lnb {
+    border-radius: 100px;
+    background-color: #fff;
+    color: #555555;
+}
+.sub_visual .lnb ul {
+    display: flex;
+    width: 100%;
+
+}
+.sub_visual .lnb ul li {
+    position: relative;
+    flex: 1;
+    white-space: nowrap;
+}
+.lnb ul li:first-child {
+    border-radius: 100px 0 0 100px;
+}
+.lnb ul li:last-child {
+    border-radius: 0 100px 100px 0;
+}
+.sub_visual .lnb ul li.active {
+    font-weight: 700;
+    color: var(--main-color);
+}
+.sub_visual .lnb ul li:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+.sub_visual .lnb ul li::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 1.5294em;
+    right: 0;
+    width: 1px;
+    height: 10px;
+    background-color: #C6C6C6;
+}
+.sub_visual .lnb ul li:last-child::after {
+    display: none;
+}
+.sub_visual .lnb ul a span {
+    display: flex;
+    justify-content: center;
+    padding: 1.1765em 0;
+}
+
+@media screen and (max-width:768px){
+    .sub_visual .wrapper {
+        height: 35.7143rem;
+    }
+    .sub_visual .sub_txt {
+        font-size: 2rem;
+    }
+    .sub_visual .lnb ul {
+        overflow-x: auto;
+    }
+}
+.contents {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4118em;
+}
+.contents .breadcrumb ol {
+    display: flex;
+    gap: 1.4118em;
+}
+.contents .breadcrumb ol li a {
+    display: flex;
+    position: relative;
+}
+.contents .breadcrumb ol li.home, .contents .breadcrumb ol li.coper {
+    color: var( --second-color);
+}
+.contents .breadcrumb ol li.home a::after {
+    position: absolute; 
+    content: "";
+    top: 0;
+    right: -24px;    
+    width: 1.4118rem;
+    height: 1.4118rem;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.7076 12.0008L15.3076 16.6008L14.5999 17.3086L9.29212 12.0008L14.5999 6.69309L15.3076 7.40084L10.7076 12.0008Z' fill='%23C6C6C6'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.contents .breadcrumb ol li.coper a::after {
+    position: absolute; 
+    content: "";
+    top: 0;
+    right: -24px;    
+    width: 1.4118rem;
+    height: 1.4118rem;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.7076 12.0008L15.3076 16.6008L14.5999 17.3086L9.29212 12.0008L14.5999 6.69309L15.3076 7.40084L10.7076 12.0008Z' fill='%23C6C6C6'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.contents .breadcrumb ol li {
+    color: #8E8E8E;
+}
+.contents .sub_title .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4118em;
+}
+.cnt_info h1 {
+    font-size: 2.5882rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+    padding-bottom: 0.4545em;
+    border-bottom: 1px solid var(--main-color);
+    width: max-content; /* 텍스트 길이만큼 너비를 설정 */
+    align-self: flex-start; /* 부모의 플렉스 정렬에서 제외 */
+}
+.cnt_info .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8235em;
+}
+
+.sub_contents {
+    min-height: 300px;
+}
