@@ -1,1 +1,163 @@
 /* 콘텐츠 페이지 스타일 저장 */
+
+/* 회사소개 > ceo인사말 */
+
+.sub_contents {
+    min-height: 300px;
+}
+.sub_contents h1 {
+    font-size: 2.5882rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+    padding-bottom: 0.4545em;
+    border-bottom: 1px solid var(--main-color);
+    width: max-content; /* 텍스트 길이만큼 너비를 설정 */
+    align-self: flex-start; /* 부모의 플렉스 정렬에서 제외 */
+}
+.sub_contents .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8235em;
+}
+@media screen and (max-width:360px){
+    .contents {
+        padding: 4.6667em 0;
+    }
+    .sub_contents h1 {
+        font-size: 1.6rem;
+    }
+}
+
+.sub_contents.cnt_ceo .ceo_title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 2.9412rem 2.9412rem 0 0;
+    height: 11.7647rem;
+    padding: 0 12.5882em;
+    background: linear-gradient(.25turn, #717171, 80%, #EF0010);
+    color: #fff;
+}
+.sub_contents.cnt_ceo .ceo_title h2 {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.sub_contents.cnt_ceo .ceo_title h2::after {
+    position: absolute;
+    content: "";
+    top: -0.3333rem;
+    left: -0.8333rem;
+    width: 1.4118rem;
+    height: 1.4118rem;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0L24 4.89796L7.83673 6.85714L5.14286 24L0 0Z' fill='%23EF0010'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.sub_contents.cnt_ceo .ceo_title .ceo_main {
+    position: absolute;
+    bottom: 0;
+    right: 12.7647rem;
+    width: 15.6471rem;
+    height: 18.1765rem;
+    font-size: 0;
+    line-height: 0;
+    background: url(../images/sub/sub_ceo01.png) no-repeat center center / cover;
+}
+.sub_contents.cnt_ceo .ceo_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4118em;
+    padding: 0 3.3333em;
+}
+.sub_contents.cnt_ceo h3 {
+    font-size: 1.4118rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--second-color);
+}
+.sub_contents.cnt_ceo .ceo_sign {
+    font-size: 0;
+    line-height: 0;
+    width: 10.7059rem;
+    height: 4.9412rem;
+    background: url(../images/sub/sub_ceo02.jpg) no-repeat center center / cover;
+}
+.sub_contents.cnt_ceo .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4118em;
+}
+
+@media screen and (max-width:1000px){
+    .sub_contents.cnt_ceo .ceo_title {
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1.4706rem 1.4706rem 0 0;
+    height: 33.0667rem;
+    padding: 5.3333em 2.6667em 0 2.6667em;
+    background: linear-gradient(#717171, 80%, #EF0010);
+    overflow: hidden;
+    }
+    .sub_contents h1 {
+
+    }
+    .sub_contents.cnt_ceo .ceo_title .ceo_main {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        width: 15.6471rem;
+        height: 18.1765rem;
+        font-size: 0;
+        line-height: 0;
+        background: url(../images/sub/sub_ceo01.png) no-repeat center center / cover;
+    }
+    .sub_contents.cnt_ceo h3 {
+        font-size: 1.4118rem;
+        font-weight: 700;
+        line-height: 1.3;
+        color: var(--second-color);
+    }
+    .sub_contents.cnt_ceo .ceo_sign {
+        font-size: 0;
+        line-height: 0;
+        width: 10.7059rem;
+        height: 4.9412rem;
+        background: url(../images/sub/sub_ceo02.jpg) no-repeat center center / cover;
+    }
+    }
+
+@media screen and (max-width:370px){
+    .sub_contents.cnt_ceo .ceo_title {
+        height: 30.4286rem;
+    }
+    .sub_contents.cnt_ceo .ceo_title h2 {
+        position: relative;
+        font-size: 1.1765rem;
+    }
+    .sub_contents.cnt_ceo .ceo_inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.2857em;
+        padding: 0 1.4286em;
+    }
+    .sub_contents.cnt_ceo h3 {
+        font-size: 1.2857rem;
+        font-weight: 700;
+        line-height: 1.3;
+        text-align: center;
+        color: var(--second-color);
+    }
+    .sub_contents.cnt_ceo .ceo_sign {
+        font-size: 0;
+        line-height: 0;
+        width: 7rem;
+        height: 3rem;
+        background: url(../images/sub/sub_ceo02.jpg) no-repeat center center / cover;
+    }
+}

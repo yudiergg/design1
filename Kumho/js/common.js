@@ -104,6 +104,13 @@ $(document).ready(function(){
                 $depth2.addClass('open');
             });
         }
+            
+        $("header .gnb ul.depth1 > li").on("click", function() {
+            // 모든 li에서 active 클래스 제거
+            $("header .gnb ul.depth1 > li").removeClass("active");
+            // 현재 클릭된 li에 active 클래스 추가
+            $(this).addClass("active");
+        });
     });
 
     /* open 추가되고 arrow 방향바뀜 */

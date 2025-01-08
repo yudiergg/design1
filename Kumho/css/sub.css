@@ -5,11 +5,6 @@
 @import url(contents.css);
 @import url(layout.css); /* 헤더 푸터 여깄음 게속 쓰는 컴포넌트 느낌으로 */
 
-
-header .gnb ul.depth1 > li.active > a {
-    position: relative;
-    color: var(--main-color);
-}
 .sub_visual .wrapper {
     display: flex;
     flex-direction: column;
@@ -21,14 +16,6 @@ header .gnb ul.depth1 > li.active > a {
     background-size: cover;
     color: #fff;
     gap: 2.8235em;
-}
-@media screen and (max-width:1000px){
-    header .gnb ul.depth2.open > li.active > a {
-        color: var(--main-color);
-    }
-    header .gnb ul.depth1.active > li > a {
-        color: var(--main-color);
-    }
 }
 .sub_visual.bg1 {
     background-image: url(../images/sub/sub_visual01.jpg);
@@ -129,10 +116,10 @@ header .gnb ul.depth1 > li.active > a {
     display: flex;
     position: relative;
 }
-.contents .breadcrumb ol li.home, .contents .breadcrumb ol li.coper {
+.contents .breadcrumb ol li {
     color: var( --second-color);
 }
-.contents .breadcrumb ol li.home a::after {
+.contents .breadcrumb ol li a::after {
     position: absolute; 
     content: "";
     top: 0;
@@ -157,27 +144,8 @@ header .gnb ul.depth1 > li.active > a {
 .contents .breadcrumb ol li {
     color: #8E8E8E;
 }
-.contents .sub_title .wrapper {
+.contents .page_title .wrapper {
     display: flex;
     flex-direction: column;
     gap: 1.4118em;
-}
-.cnt_info h1 {
-    font-size: 2.5882rem;
-    font-weight: 700;
-    line-height: 1.2;
-    color: #1d1d1d;
-    padding-bottom: 0.4545em;
-    border-bottom: 1px solid var(--main-color);
-    width: max-content; /* 텍스트 길이만큼 너비를 설정 */
-    align-self: flex-start; /* 부모의 플렉스 정렬에서 제외 */
-}
-.cnt_info .wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 2.8235em;
-}
-
-.sub_contents {
-    min-height: 300px;
 }

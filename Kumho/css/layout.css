@@ -24,6 +24,20 @@
     top: 0;
 }
 
+/* 클릭했을때 헤더에 현재 페이지 색상 표기 */
+header .gnb ul.depth1 > li.active > a {
+    position: relative;
+    color: var(--main-color);
+}
+@media screen and (max-width:1000px){
+    header .gnb ul.depth2.open > li.active > a {
+        color: var(--main-color);
+    }
+    header .gnb ul.depth1.active > li > a {
+        color: var(--main-color);
+    }
+}
+
 header {
     z-index: 3;
     position: fixed;
