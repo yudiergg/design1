@@ -161,3 +161,214 @@
         background: url(../images/sub/sub_ceo02.jpg) no-repeat center center / cover;
     }
 }
+
+.cnt_history .history {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 11.2941em;
+}
+.cnt_history .history::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #C6C6C6;
+}
+.cnt_history .history .histroy_wrap {
+    display: flex;
+    gap: 5.6471rem;
+}
+.cnt_history .history .histroy_wrap.right {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: right;
+}
+.cnt_history .history .his {
+    width: 100%;
+    height: 16.4706rem;
+    overflow: hidden;
+    border-radius: 1.1765rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cnt_history .history .his.photo01 {
+    background: url(../contents/history_photo01.png);
+}
+.cnt_history .history .his.photo02 {
+    background: url(../contents/history_photo02.png);
+}
+.cnt_history .history .his.photo03 {
+    background: url(../contents/history_photo03.png);
+}
+.cnt_history .history .his.photo04 {
+    background: url(../contents/history_photo04.png);
+}
+
+.cnt_history .history .hist {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2.8235em;
+}
+.cnt_history .history .hist h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--second-color);
+}
+.cnt_history .history .hist.left h2 {
+    position: relative;
+}
+.cnt_history .history .hist.left h2::after {
+    z-index: 2;
+    position: absolute;
+    content: "";
+    top: 12px;
+    left: -53px;
+    width: 0.5882rem;
+    height: 0.5882rem;
+    background-color: var(--main-color);
+    border-radius: 50%;
+}
+.cnt_history .history .hist.left h2:first-child:before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    left: -49px;
+    bottom: -5px;
+    width: 2px;
+    height: 3.5294rem;
+    background-color: var(--main-color);
+    border-radius: 100px;
+}
+
+.cnt_history .history .hist.right h2 {
+    position: relative;
+}
+.cnt_history .history .hist.right h2::after {
+    z-index: 10;
+    position: absolute;
+    content: "";
+    top: 12px;
+    right: -53px;
+    width: 0.5882rem;
+    height: 0.5882rem;
+    background-color: var(--main-color);
+    border-radius: 50%;
+}
+.cnt_history .history .hist ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4118rem;
+}
+.cnt_history .history .hist ul li {
+    display: flex;
+    justify-content: space-between;
+}
+.cnt_history .history .hist strong {
+    width: 13.74%;
+    font-weight: 700;
+}
+.cnt_history .history .hist span {
+    width: 83.50%;
+}
+
+.cnt_history .history_tap {
+    z-index: 10;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1.1765rem;
+    padding: 0.5882em 1.1765em;
+    width: calc(100% - 660px);
+    min-width: 20rem;
+    border-radius: 5.8824rem;
+    border: 1px solid #C6C6C6;
+    background-color: #fff;
+    overflow-x: auto;
+}
+.cnt_history .history_tap ul {
+    display: flex;
+}
+.cnt_history .history_tap ul li {
+    flex: 1;
+}
+.cnt_history .history_tap ul li button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1.1765em 1.1765em;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.cnt_history .history_tap ul li.active button {
+    border-radius: 5.8824rem;
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+@media screen and (max-width:1000px){
+    .cnt_history .history .hist.left h2::after {
+        left: -47px;
+    }
+    .cnt_history .history .hist.left h2:first-child:before {
+        left: -43px;
+        bottom: -5px;
+    }
+    .cnt_history .history .hist.right h2::after {
+        right: -46px;
+    }
+}
+
+@media screen and (max-width:360px){
+    .cnt_history .history::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 300PX;
+        width: 1px;
+        height: 100%;
+        background-color: #C6C6C6;
+    }
+    .cnt_history .history .histroy_wrap {
+        flex-direction: column;
+    }
+    .cnt_history .history .hist {
+        padding-left: 1.4286em;
+        align-items: flex-start;
+    }
+    .cnt_history .history .hist.left h2::after {
+        top: 12px;
+        left: -24px;
+    }
+    .cnt_history .history .hist.left h2:first-child:before {
+        left: -21px;
+        bottom: 0;
+    }
+    .cnt_history .history .histroy_wrap.right {
+        flex-direction: column;
+    }
+    .cnt_history .history .hist.right h2::after {
+        top: 12px;
+        left: -24px;
+    }
+    .cnt_history .history .hist ul li {
+        gap: 1em;
+    }
+    .cnt_history .history .hist.right ul li {
+        display: flex;
+        flex-direction: row-reverse;   
+    }
+    .cnt_history .history .hist.right ul li span {
+        text-align: left;
+    }
+    .cnt_history .history .hist strong {
+        text-align: left;
+        width: 40.74%;
+    }
+}
