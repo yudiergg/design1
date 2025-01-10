@@ -100,6 +100,7 @@
         font-size: 2rem;
     }
     .sub_visual .lnb ul {
+        width: 717px;
         overflow-x: auto;
     }
 }
