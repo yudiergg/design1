@@ -48,3 +48,7 @@ input, textarea, select {
     line-height: inherit;
     letter-spacing: inherit;
 }
+th {
+    font-weight: inherit;
+    text-align: inherit;
+}
