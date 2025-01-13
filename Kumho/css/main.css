@@ -66,7 +66,6 @@
 }
 .visual .ctrl_wrap .paging span.swiper-pagination-current {
     position: relative;
-    font-weight: 0;
     margin-right: 6.7059em;
 }
 .visual .ctrl_wrap .paging span.swiper-pagination-current::before {
