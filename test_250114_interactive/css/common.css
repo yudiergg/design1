@@ -1,0 +1,68 @@
+body, html {
+    font-family: 'Pretendard','NanumSquareNeo', '나눔스퀘어네오', '나눔고딕', NanumGothic, -apple-system, BlinkMacSystemFont, helvetica, "Apple SD Gothic Neo", sans-serif;
+    /* 먼저 사용한 순서대로 적용됨 , 한글적용안되면 두번째에 한글폰트 지원한 폰트가사용됨*/
+    font-size: var(--default-font-size);
+    font-weight: 400;
+    color: #555;
+    line-height: 1.5;
+    word-break: keep-all; 
+    word-wrap: break-word;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+#wrap {
+    width: 100%;
+    overflow: hidden; 
+    position: relative;
+}
+:root {
+    --title-font-size : 50px;
+    --default-font-size: 17px;
+    --color-disalbe : #E4E4E4;
+    --color-txt-disable : #8E8E8E;
+    --color-title : #1D1D1D;
+    --color-bg : #fff;
+}
+
+@media screen and (max-width:1300px){
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width:1200px){
+    :root {
+        --default-font-size: 15px;
+    }
+}
+@media screen and (max-width:1000px){
+    :root {
+        --default-font-size: 15px;
+    }
+}
+@media screen and (max-width:740px){
+    :root {
+        --default-font-size: 14px;
+        --header-h: 57px;
+    }
+    
+}
+@media screen and (max-width:360px){
+    :root {
+        --default-font-size: 14px;
+        --header-h: 57px;
+    }
+    
+}
+
+/* 드래그했을대 색상바뀌는거 */
+::selection {
+    background-color: #AE9E8F;
+    color: #FFF9F0;
+}
+::-moz-selection {
+    background-color: #AE9E8F;
+    color: #FFF9F0;
+}

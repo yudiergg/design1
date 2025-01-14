@@ -1,0 +1,142 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+
+body {
+    margin: 0 0 100vh 0;
+}
+
+.txt_ani {
+    margin: 10.41em 0 48em 0;
+}
+.txt_ani.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.txt_ani .row {
+    position: relative;
+    font-size: 4vw;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: var(--color-disalbe);
+}
+.txt_ani .row span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    overflow: hidden;
+    color: var(--color-title);
+    animation: txt_ani;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes txt_ani {
+    0% {width: 0;}
+    100% {width: 100%;}
+}
+.txt_ani .row:nth-child(1) span {
+    animation-delay: 0.5s;
+}
+.txt_ani .row:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+
+.txt_slide {
+    margin: 100vh 0 0 0;
+}
+.txt_slide .wrppaer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.txt_slide .row {
+    position: relative;
+    font-size: 6vw;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: var(--color-disalbe);
+}
+.txt_slide .row span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    overflow: hidden;
+    color: var(--color-title);
+    transition: 0.2s;
+}
+
+.photo_resize {
+    margin: 9em 0;
+}
+.photo_resize .photo {
+    font-size: 0;
+    line-height: 0;
+    width: 50%;
+    height: 23rem;
+    margin: 0 auto;
+    background: url(../images/photo_resize01.jpg) no-repeat center center / cover;
+}
+@media screen and (max-width:1300px){
+    .txt_slide .row {
+        font-size: 5vw;
+    }
+}
+
+.bg_fixed {
+    background: url(../images/bg_fix01.jpg) no-repeat center center /cover;
+    background-attachment: fixed; /* 이미지 원본 높이가 높아야함 */
+    height: 36.52rem;
+    color: #fff;
+}
+.bg_fixed h2 {
+    font-size: 4vw;
+    font-weight: 700;
+    padding-top: 4vw;
+}
+
+.bg_change {
+    padding: 5.6471em 0;
+    margin: 5.6471em 0;
+}
+.bg_change.black {
+    background-color: var(--color-title);
+    color: var(--color-bg);
+}
+.bg_change.black .video_fit .tit h2 {
+    color: var(--color-bg);
+}
+.video_fit {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8235em;
+}
+.video_fit .tit {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4118em;
+}
+.video_fit .tit h2 {
+    font-size: 3vw;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-title);
+}
+.video_fit .movie {
+    margin: 0 auto;
+    max-width: 1260px;
+    width: 80%;
+    height: 100vh;
+    overflow: hidden;
+}
+.video_fit video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
