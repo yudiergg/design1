@@ -46,7 +46,7 @@
             <h2>EMPOWERING COMMUNITIES,<br>SHAPING THE FUTURE</h2>
         </div>
     </section>
-    <div class="bg_change">
+    <div class="bg_change" >
         <section class="video_fit">
             <div class="wrapper">
                 <div class="tit">
@@ -54,11 +54,15 @@
                 <p>우리는 안정과 지속성장을 추구하는 기업, 형지엘리트입니다.<br>고객에게 행복과 기쁨을 주는 혁신적인 제품과 서비스를 창출하며,<br>보다 편리하고 세련된 라이프스타일을 만들어 나갑니다.<br>영상 속에 담긴 형지엘리트의 브랜드 가치와 비전을 경험해보세요.</p>
                 </div>
             </div>
+            <div class="movie_h" data-status="before"> <!--상태값이 여러개여서 배열처럼  before fixed after 구조를 짜줌-->
                 <div class="movie">
-                    <video>
-                        <source src="images/movie.mp4" type="video/mp4">
-                    </video>
+                    <div class="movie_inner">
+                        <video autoplay muted loop playsinline>
+                            <source src="images/movie.mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
+            </div>
         </section>
         <section class="scroll_event"></section>
     </div>
