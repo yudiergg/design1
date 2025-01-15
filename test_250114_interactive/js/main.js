@@ -171,11 +171,11 @@ $(document).ready(function(){
         vf_area_gap = vf_end - vf_start
 
         if(scrolling < vf_start){
-            console.log('아직 아니다')
+            // console.log('아직 아니다')
             vf_area_name.attr('data-status', 'before') //기존값을 지우고 내가 준값으로 교체
             vf_resize_w = vf_resize_start
         }else if(scrolling < vf_end){
-            console.log('고정')
+            // console.log('고정')
             vf_area_name.attr('data-status', 'fixed')
             vf_scroll_per = (scrolling - vf_start) / vf_area_gap
             vf_resize_w = ((vf_resize_end - vf_resize_start) * vf_scroll_per) + vf_resize_start
@@ -184,7 +184,7 @@ $(document).ready(function(){
                 vf_resize_w = vf_resize_end
             }
         }else{
-            console.log('끝')
+            // console.log('끝')
             vf_area_name.attr('data-status', 'after')
             vf_resize_w = vf_resize_end
         }
@@ -203,5 +203,76 @@ $(document).ready(function(){
     })
 
     
+    /* 스크롤하면 타이틀영역과 함께 사진도 같이 올라가고 내려가게 하기
+        시작점 scroll_event 화면에 나타나면
+        scroll_event h2 transform:translateY() 값을 좆러해서 계속 위로 이동
+        (현재 스크롤값 - 스크롤 시작값)에 일정 수를 곱해서 px로 줌
+    */
 
+    let ev_area_name = $('.scroll_event') // 감싸는 영역
+    let ev_area_start // 이벤트 시작값
+    let ev_move_name = $('.scroll_event h2') // 움직일 요소
+    let ev_move // 움직일값
+
+    function scroll_event(){
+        ev_area_start = ev_area_name.offset().top - window_h
+        // console.log('스크롤값', scrolling, '시작값',ev_area_start)
+        if(scrolling > ev_area_start){
+            // console.log('움직임')
+            ev_move = (ev_area_start - scrolling) / window_h * 180
+        }else{
+            console.log('0')
+            ev_move = 0
+        }
+        console.log(ev_move)
+        ev_move_name.css('transform','translateY('+ ev_move +'px)')
+    }
+
+    scroll_event()
+    $(window).scroll(function(){
+        scroll_event()
+    })
+    $(window).resize(function(){
+        scroll_event()
+    })
+
+    /* slick 팝업 */
+    $('.popup_wrap').slick({
+        autoplay: false, //팝업 자동 실행
+        autoplaySpeed: 3000, //팝업이 머무는 시간
+        speed: 500, //팝업 전환 속도
+        dots: false, //하단 페이지 버튼 (true, false)
+        arrows: true,  //다음, 이전팝업 (true, false)
+        //pauseOnHover: true, //마우스호버시 일시정지
+        infinite: true, //무한반복
+        // variableWidth: true, //넓이를 자유롭게 설정
+        slidesToShow: 4, //한번에 보일 팝업 수
+        //slidesToScroll: 1, //한번 드래그에 움직이는 슬라이드 제한
+        swipeToSlide: true, //드래그한만큼 슬라이드 움직이기
+        //centerMode: true, //가운데정렬(가운데가 1번)
+    });
+    $('.클래스명').slick('slickPause');  /* 일시정지 기능 */
+    $('.클래스명').slick('slickPlay');  /* 재생 기능 */
+
+    /* swiper 팝업 */
+    const swiper_list = new Swiper('.list .swiper', { /* 팝업을 감싼는 요소의 class명 */
+	slidesPerView: 4, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+	spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+	breakpoints: {
+		1280: {    /* 1280px 이상일때 적용 */
+			slidesPerView: 4,
+			spaceBetween: 24,
+		},
+	},
+	centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+	loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+	autoplay: {  /* 팝업 자동 실행 */
+		delay: 2500,
+		disableOnInteraction: true,
+	},
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+    });
 })

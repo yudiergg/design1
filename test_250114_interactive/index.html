@@ -8,64 +8,197 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/slick.min.js"></script>
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/main.css">
     <title>인터렉티브 연습</title>
 </head>
 <body>
-    <section class="txt_ani">
-        <div class="wrapper">
-            <div class="row">
-                세계로 뻗어가는
-                <span>세계로 뻗어가는</span>
-            </div>
-            <div class="row">
-                귀여운 포켓몬들이 있습니다
-                <span>귀여운 포켓몬들이 있습니다</span>
-            </div>
-        </div>
-    </section>
-    <section class="txt_slide">
-        <div class="wrapper">
-            <div class="row">
-                POKETMON
-                <span>POKETMON</span>
-            </div>
-            <div class="row">
-                SHAPING THE FUTURE
-                <span>SHAPING THE FUTURE</span>
-            </div>  
-        </div>
-    </section>
-    <section class="photo_resize">
-        <div class="wrapper">
-            <div class="photo">사진</div>
-        </div>
-    </section>
-    <section class="bg_fixed">
-        <div class="wrapper">
-            <h2>EMPOWERING COMMUNITIES,<br>SHAPING THE FUTURE</h2>
-        </div>
-    </section>
-    <div class="bg_change" >
-        <section class="video_fit">
+    <div id="wrap">
+        <section class="txt_ani">
             <div class="wrapper">
-                <div class="tit">
-                <h2>No.1 Lifestyle<br>Creation Company</h2>
-                <p>우리는 안정과 지속성장을 추구하는 기업, 형지엘리트입니다.<br>고객에게 행복과 기쁨을 주는 혁신적인 제품과 서비스를 창출하며,<br>보다 편리하고 세련된 라이프스타일을 만들어 나갑니다.<br>영상 속에 담긴 형지엘리트의 브랜드 가치와 비전을 경험해보세요.</p>
+                <div class="row">
+                    세계로 뻗어가는
+                    <span>세계로 뻗어가는</span>
                 </div>
-            </div>
-            <div class="movie_h" data-status="before"> <!--상태값이 여러개여서 배열처럼  before fixed after 구조를 짜줌-->
-                <div class="movie">
-                    <div class="movie_inner">
-                        <video autoplay muted loop playsinline>
-                            <source src="images/movie.mp4" type="video/mp4">
-                        </video>
-                    </div>
+                <div class="row">
+                    귀여운 포켓몬들이 있습니다
+                    <span>귀여운 포켓몬들이 있습니다</span>
                 </div>
             </div>
         </section>
-        <section class="scroll_event"></section>
+        <section class="txt_slide">
+            <div class="wrapper">
+                <div class="row">
+                    POKETMON
+                    <span>POKETMON</span>
+                </div>
+                <div class="row">
+                    SHAPING THE FUTURE
+                    <span>SHAPING THE FUTURE</span>
+                </div>  
+            </div>
+        </section>
+        <section class="photo_resize">
+            <div class="wrapper">
+                <div class="photo">사진</div>
+            </div>
+        </section>
+        <section class="bg_fixed">
+            <div class="wrapper">
+                <h2>EMPOWERING COMMUNITIES,<br>SHAPING THE FUTURE</h2>
+            </div>
+        </section>
+        <div class="bg_change" >
+            <section class="video_fit">
+                <div class="wrapper">
+                    <div class="tit">
+                    <h2>No.1 Lifestyle<br>Creation Company</h2>
+                    <p>우리는 안정과 지속성장을 추구하는 기업, 형지엘리트입니다.<br>고객에게 행복과 기쁨을 주는 혁신적인 제품과 서비스를 창출하며,<br>보다 편리하고 세련된 라이프스타일을 만들어 나갑니다.<br>영상 속에 담긴 형지엘리트의 브랜드 가치와 비전을 경험해보세요.</p>
+                    </div>
+                </div>
+                <div class="movie_h" data-status="before"> <!--상태값이 여러개여서 배열처럼  before fixed after 구조를 짜줌-->
+                    <div class="movie">
+                        <div class="movie_inner">
+                            <video autoplay muted loop playsinline>
+                                <source src="images/movie.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="scroll_event">
+                <div class="wrapper">
+                    <h2>No.1 Lifestyle<br>Creation Company</h2>
+                    <div class="photo">사진</div>
+                </div>
+            </section>
+        </div>
+            <section class="book">
+                <div class="list">
+                    <div class="popup">
+                        <div class="popup_wrap"> <!-- slick에서 호출하는 이름 -->
+                            <div class="poop_item">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book01.jpg" alt=""></div>
+                                    <div class="pop_tit">
+                                        <h2>형지엘리트 윌비플레이, LG 트윈스 문보경 선수와 후원 계약 체결</h2>
+                                        <span>2024.08.07</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="poop_item">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book02.jpg" alt=""></div>
+                                    <div class="pop_tit">
+                                        <h2>형지엘리트 윌비플레이, LG 트윈스 문보경 선수와 후원 계약 체결</h2>
+                                        <span>2024.08.07</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="poop_item">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book03.jpg" alt=""></div>
+                                    <div class="pop_tit">
+                                        <h2>형지엘리트 윌비플레이, LG 트윈스 문보경 선수와 후원 계약 체결</h2>
+                                        <span>2024.08.07</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="poop_item">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book04.jpg" alt=""></div>
+                                    <div class="pop_tit">
+                                        <h2>형지엘리트 윌비플레이, LG 트윈스 문보경 선수와 후원 계약 체결</h2>
+                                        <span>2024.08.07</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="poop_item">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book05.jpg" alt=""></div>
+                                    <div class="pop_tit">
+                                        <h2>형지엘리트 윌비플레이, LG 트윈스 문보경 선수와 후원 계약 체결</h2>
+                                        <span>2024.08.07</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="poop_item">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book06.jpg" alt=""></div>
+                                    <div class="pop_tit">
+                                        <h2>형지엘리트 윌비플레이, LG 트윈스 문보경 선수와 후원 계약 체결</h2>
+                                        <span>2024.08.07</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <section class="best">
+            <div class="list">
+                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                        <li class="swiper-slide">
+                            <a href="#n">
+                                <div class="photo"><img src="images/book01.jpg" alt=""></div>
+                                <div class="pop_tit">
+                                    <h2>형지엘리트 윌비플레이, LG 트윈스 문보경 선수와 후원 계약 체결</h2>
+                                    <span>2024.08.07</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#n">
+                                <div class="photo"><img src="images/book02.jpg" alt=""></div>
+                                <div class="pop_tit">
+                                    <h2>형지엘리트 윌비플레이, LG 트윈스 문보경 선수와 후원 계약 체결</h2>
+                                    <span>2024.08.07</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#n">
+                                <div class="photo"><img src="images/book03.jpg" alt=""></div>
+                                <div class="pop_tit">
+                                    <h2>형지엘리트 윌비플레이, LG 트윈스 문보경 선수와 후원 계약 체결</h2>
+                                    <span>2024.08.07</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#n">
+                                <div class="photo"><img src="images/book04.jpg" alt=""></div>
+                                <div class="pop_tit">
+                                    <h2>형지엘리트 윌비플레이, LG 트윈스 문보경 선수와 후원 계약 체결</h2>
+                                    <span>2024.08.07</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#n">
+                                <div class="photo"><img src="images/book05.jpg" alt=""></div>
+                                <div class="pop_tit">
+                                    <h2>형지엘리트 윌비플레이, LG 트윈스 문보경 선수와 후원 계약 체결</h2>
+                                    <span>2024.08.07</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#n">
+                                <div class="photo"><img src="images/book06.jpg" alt=""></div>
+                                <div class="pop_tit">
+                                    <h2>형지엘리트 윌비플레이, LG 트윈스 문보경 선수와 후원 계약 체결</h2>
+                                    <span>2024.08.07</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </div>
-    <section class="book"></section>
 </body>
 </html>

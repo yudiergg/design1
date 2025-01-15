@@ -103,6 +103,9 @@ body {
 }
 
 .bg_change {
+    display: flex;
+    flex-direction: column;
+    gap: 5.6471em;
     padding: 5.6471em 0;
     margin: 5.6471em 0;
     transition: color 0.8s;
@@ -173,6 +176,105 @@ body {
     object-fit: cover;
 }
 
-@media screen and (max-width:1300px){
+.scroll_event .wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+.scroll_event h2 {
+    position: absolute;
+    top: 16vw;
+    left: 0;
+    font-size: 5vw;
+    font-weight: 700;
+    line-height: 1.2;
+    transition: 0.1s;    
+}
+.scroll_event .photo {
+    font-size: 0;
+    line-height: 0;
+    width: 57.14%;
+    height: 20.8235rem;
+    background: url(../images/scroll_event01.jpg) no-repeat center center / cover;
+    border-radius: 1.1765rem;
+}
 
+@media screen and (max-width:640px){
+    .scroll_event h2 {
+        top: -3vw;
+    }
+    .scroll_event .photo {
+        width: 100%;
+    }
+}
+
+.book .list {
+    position: relative;
+    left: calc(50% - 630px);
+    width: calc(50% + 630px);
+}
+.book .list .popup .poop_item {
+    margin-right: 1.4em;
+}
+.book .list .popup .poop_item a {
+    display: flex;
+    flex-direction: column;
+}
+.book .list .popup .poop_item a h2 {
+    margin-top: 0.9rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-title);
+}
+.book .list .popup .poop_item a span {
+    display: none;
+    color: #8E8E8E;
+}
+.book .list .popup .poop_item a .photo {
+    height: 13.3529rem;
+    border-radius: 1.1rem;
+    overflow: hidden;
+}
+.book .list .popup .poop_item a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width:1300px){
+    .book .list {
+        left: 20px;
+        width: calc(100% - 20px);
+    }
+}
+
+.best .list {
+    position: relative;
+    left: calc(50% - 630px);
+    width: calc(50% + 630px);
+}
+.best .list .swiper ul li {
+    display: flex;
+    flex-direction: column;
+    width: 11.1176rem;
+}
+.best .list .swiper ul li a h2 {
+    margin-top: 0.9rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-title);
+}
+.best .list .swiper ul li a span {
+    display: none;
+    color: #8E8E8E;
+}
+.best .list .swiper ul li a .photo {
+    height: 13.3529rem;
+    border-radius: 1.1rem;
+    overflow: hidden;
+}
+.best .list .swiper ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
