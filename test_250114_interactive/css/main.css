@@ -208,21 +208,46 @@ body {
     }
 }
 
+.book {
+    margin-bottom: 200px;
+}
 .book .list {
     position: relative;
     left: calc(50% - 630px);
     width: calc(50% + 630px);
+    border: 1px solid red;
 }
 .book .list .popup .poop_item {
     margin-right: 1.4em;
 }
-.book .list .popup .poop_item a {
+.book .list .popup .poop_item.slick-current {
     display: flex;
+    gap: 1.4em;
+}
+.book .list .popup .poop_item.slick-current a {
+    display: flex;
+    justify-content: space-between;
+}
+.book .list .popup .poop_item.slick-current a span {
+    display: block;
+}
+.book .list .popup .poop_item.slick-current a h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+.book .list .popup .poop_item.slick-current a .photo {
+    width: 55.89%;
+    height: 20.8824rem;
+}
+.book .list .popup .poop_item a .pop_tit {
+    display: flex;
+    gap: 1.4em;
+    width: 11.1176rem;
     flex-direction: column;
 }
 .book .list .popup .poop_item a h2 {
     margin-top: 0.9rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--color-title);
 }
@@ -240,18 +265,39 @@ body {
     height: 100%;
     object-fit: cover;
 }
-
-@media screen and (max-width:1300px){
-    .book .list {
-        left: 20px;
-        width: calc(100% - 20px);
-    }
+.book .list .slick-prev, .slick-next {
+    z-index: 10;
+    position: absolute;
+    top: auto;
+    bottom: 2.94px;
+    width: 2.8rem;
+    height: 2.8rem;
+    background: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='49' viewBox='0 0 48 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24.375' r='24' transform='rotate(180 24 24.375)' fill='%23E4E4E4'/%3E%3Cpath d='M22.7383 24.375L28.8716 30.5083L27.4666 31.9133L19.9283 24.375L27.4666 16.8367L28.8716 18.2417L22.7383 24.375Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
 }
+.book .list .slick-next:before, .slick-prev:before {
+    display: none;
+}
+.book .list .slick-prev {
+    left: auto;
+    right: 74%;
+}
+.book .list .slick-next {
+    right: auto;
+    left: 28%;
+    bottom: 27px;
+    transform: scaleX(-1);
+}
+
+
 
 .best .list {
     position: relative;
     left: calc(50% - 630px);
     width: calc(50% + 630px);
+    border: 1px solid red;
 }
 .best .list .swiper ul li {
     display: flex;
@@ -277,4 +323,100 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.best .list .btn_wrap {
+    display: flex;
+    gap: 1.4em;
+}
+.best .list .swiper ul li.swiper-slide-active {
+    width: 28.4118rem;
+}
+.best .list .swiper ul li.swiper-slide-active a {
+    display: flex;
+    gap: 1.4em;
+}
+.best .list .swiper ul li.swiper-slide-active a span {
+    display: block;
+}
+.best .list .swiper ul li.swiper-slide-active a h2 {
+    margin-top: 0;
+}
+.best .list .swiper ul li.swiper-slide-active a .photo {
+    width: 55.89%;
+    height: 20.8824rem;
+}
+.best .list .swiper ul li.swiper-slide-active a .pop_tit {
+    display: flex;
+    gap: 1.4em;
+    width: 11.1176rem;
+    flex-direction: column;
+}
+.best .list .swiper ul li.swiper-slide-active a span {
+    display: block;
+    color: #8E8E8E;
+}
+.best .list .btn_wrap .prev, .next {
+    font-size: 0;
+    line-height: 0;
+    width: 2.8rem;
+    height: 2.8rem;
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='49' viewBox='0 0 48 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24.375' r='24' transform='rotate(180 24 24.375)' fill='%23E4E4E4'/%3E%3Cpath d='M22.7383 24.375L28.8716 30.5083L27.4666 31.9133L19.9283 24.375L27.4666 16.8367L28.8716 18.2417L22.7383 24.375Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.best .list .btn_wrap .next {
+    transform: scaleX(-1);
+}
+
+.cursor { 
+	position: absolute;  /* 반드시 absolute여야 하고 위치는 jquery에서 적용 시킴 */
+	z-index: 1000;
+	transform: translate(0, 0); /* 커서 위치 조정 */
+	display:none; /* 평소에는 보이지 않게 하기 위해서 - 만약 원래도 따라다니는 마우스 포인터를 디자인하려면 스타일을 주면 됨. */
+    bottom: 200px;
+    left: 100px;
+}
+.cursor.drag {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9.7rem;
+    height: 9.7rem;
+    background-color: rgba(29, 29, 29, 0.4);
+    color: #fff;
+    border-radius: 50%;
+}
+.cursor.drag::before,::after {
+    width: 2.9rem;
+    height: 2.9rem;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='55' height='55' viewBox='0 0 55 55' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.3315 27.5L35.8732 38.0417L33.4583 40.4565L20.5018 27.5L33.4583 14.5435L35.8732 16.9584L25.3315 27.5Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.cursor.drag::after{
+    transform: scaleX(-1);
+}
+.cursor.drag span::before {
+    content: "drag";
+}
+
+.cursor.view {
+    position: relative;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9.7rem;
+    height: 9.7rem;
+    background-color: rgba(29, 29, 29, 0.4);
+    color: #fff;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+}
+.cursor.view::after{
+    display: none;
+}
+.cursor.view::before {
+	content: "view";
 }

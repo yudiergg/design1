@@ -239,40 +239,55 @@ $(document).ready(function(){
     /* slick 팝업 */
     $('.popup_wrap').slick({
         autoplay: false, //팝업 자동 실행
-        autoplaySpeed: 3000, //팝업이 머무는 시간
-        speed: 500, //팝업 전환 속도
+        autoplaySpeed: 0, //팝업이 머무는 시간
+        speed: 0, //팝업 전환 속도
+        // cssEase: 'linear',
+        pauseOnHover:true, //마우스호버시 일시정지
         dots: false, //하단 페이지 버튼 (true, false)
         arrows: true,  //다음, 이전팝업 (true, false)
-        //pauseOnHover: true, //마우스호버시 일시정지
+        pauseOnHover: false, //마우스호버시 일시정지
         infinite: true, //무한반복
-        // variableWidth: true, //넓이를 자유롭게 설정
-        slidesToShow: 4, //한번에 보일 팝업 수
+        variableWidth: true, //넓이를 자유롭게 설정
+        slidesToShow: 5, //한번에 보일 팝업 수
         //slidesToScroll: 1, //한번 드래그에 움직이는 슬라이드 제한
         swipeToSlide: true, //드래그한만큼 슬라이드 움직이기
-        //centerMode: true, //가운데정렬(가운데가 1번)
+        centerMode: false, //가운데정렬(가운데가 1번)
     });
     $('.클래스명').slick('slickPause');  /* 일시정지 기능 */
     $('.클래스명').slick('slickPlay');  /* 재생 기능 */
 
     /* swiper 팝업 */
     const swiper_list = new Swiper('.list .swiper', { /* 팝업을 감싼는 요소의 class명 */
-	slidesPerView: 4, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
-	spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
-	breakpoints: {
-		1280: {    /* 1280px 이상일때 적용 */
-			slidesPerView: 4,
-			spaceBetween: 24,
-		},
-	},
-	centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+	slidesPerView: 'auto', /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+	spaceBetween: 24, /* 팝업과 팝업 사이 여백 */
+
+	centeredSlides: false, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
 	loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
-	autoplay: {  /* 팝업 자동 실행 */
-		delay: 2500,
-		disableOnInteraction: true,
-	},
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
+		nextEl: '.best .list .btn_wrap .prev',
+		prevEl: '.best .list .btn_wrap .next',
 	},
     });
+    swiper.on('slideChangeTransitionStart',function(){
+        swiper.slideReset()
+        swiper.update()
+    })
+    swiper.on('slideChange',function(){
+        swiper.slideReset()
+        swiper.update()
+    })
+
+    /* 마우스 커서 */
+    
+    $(window).on('scroll mousemove', function(e){  /* html cursor가 마우스 포인터를 따라다니게 하는 값 */
+    $('.cursor').css('left', e.pageX + 'px');
+    $('.cursor').css('top', e.pageY + 'px');
+    });
+    $('.book a').on('mouseenter',function(){
+        $('.cursor').addClass('drag');
+    })
+    $('.book a').on('mouseleave',function(){
+        $('.cursor').removeClass('drag');
+    })
+
 })
