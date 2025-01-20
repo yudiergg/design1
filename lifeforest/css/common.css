@@ -1,0 +1,94 @@
+body, html {
+    font-family: "Paperlogy",'NanumSquareNeo', '나눔스퀘어네오', '나눔고딕', NanumGothic, -apple-system, BlinkMacSystemFont, helvetica, "Apple SD Gothic Neo", sans-serif;
+    font-size: var( --body-m-default);
+    font-weight: 400;
+    color: var(--body-color);
+    line-height: 1.5;
+    word-break: keep-all; 
+    word-wrap: break-word;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+#wrap {
+    width: 100%;
+    overflow: hidden; 
+    position: relative;
+}
+title {
+    
+}
+h2 {
+    font-size: var(--h2);
+    line-height: 1.4;
+    color: var(--title-color);
+    font-weight: 600;
+}
+h3 {
+    font-size: var(--h3);
+    line-height: 1.4;
+    color: var(--title-color);
+    font-weight: 600;
+}
+h4 {
+    font-size: var(--h3);
+    line-height: 1.4;
+    color: var(--title-color);
+    font-weight: 600;
+}
+
+:root {
+    --visual-title-L: 3.52rem;
+    --visual-title-m: 2.58rem;
+    --visual-title-s: 2.11rem;
+    --h2: 2.35rem;
+    --h3: 1.88rem;
+    --h4: 1.41rem;
+    --body-L: 1.11rem;
+    --body-m-default: 17px;
+    --body-s: 0.88rem;
+    --body-xs: 0.76rem;
+    --header-h: 4.70rem;
+    --primary-color: #01A383;
+    --second-color: #48BED8;
+    --title-color: #1d1d1d;
+    --body-color: #555555;
+    
+}
+
+@media screen and (max-width:1300px){
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width:1200px){
+
+}
+@media screen and (max-width:1000px){
+
+}
+@media screen and (max-width:740px){
+    :root {
+        --header-h: 3.17rem;
+    }
+}
+@media screen and (max-width:360px){
+    :root {
+        --header-h: 3.17rem;
+    }
+    
+}
+
+
+
+/* 드래그했을대 색상바뀌는거 */
+::selection {
+    background-color: #AE9E8F;
+    color: #FFF9F0;
+}
+::-moz-selection {
+    background-color: #AE9E8F;
+    color: #FFF9F0;
+}

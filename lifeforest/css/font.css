@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Paperlogy";
+    src: url('../fonts/Paperlogy-4Regular.woff2') format('woff2'); /* 항상 웹폰트 로컬로 불러오기? 상대 망하면 못받ㅇ옴 */
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Paperlogy";
+    src: url('../fonts/Paperlogy-6SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
